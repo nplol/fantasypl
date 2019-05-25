@@ -2,7 +2,7 @@
 
 ## Start: 2015/16
 
-Penalty for ikke-deltagelse: Laveste poengsum - 20p.
+Penalty for ikke-deltagelse: `Laveste poengsum - 20p`.
 
 
 | Standing | Changes | Team       | 2015/16  | 2016/17  | 2017/18 | 2018/19 | Sum   |
