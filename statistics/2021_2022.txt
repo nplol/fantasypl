@@ -4,7 +4,7 @@
 
 ÅRETS VISJONÆRE
 What if-tabell for GW1-picks
-Trykk Enter for å se resultatet+----------------------+--------------+----------+-----------+-----------------+-------------------------------------------------------------------------------+
++----------------------+--------------+----------+-----------+-----------------+-------------------------------------------------------------------------------+
 |         Team         | Total points | C points | VC points | Auto-sub points |                                   GW1 picks                                   |
 +----------------------+--------------+----------+-----------+-----------------+-------------------------------------------------------------------------------+
 |     Soccer MC’s      |     1996     |   265    |     30    |       119       |                                 Sánchez (126)                                 |
@@ -72,11 +72,671 @@ Trykk Enter for å se resultatet+----------------------+--------------+---------
 |                      |              |          |           |                 |                                                                               |
 |   My balls are ok    |      0       |    0     |     0     |        0        |                                                                               |
 +----------------------+--------------+----------+-----------+-----------------+-------------------------------------------------------------------------------+
-
-
-Trykk Enter for neste statistikk
-
 ÅRETS CAPTAIN FORESIGHT
 Spillerne med flest kapteinspoeng
 Her teller kun "ekstra" poeng spilleren gir for å være kaptein, ie. 1 x for normal kaptein og 2 x for triple
-Trykk Enter for å se resultatet
++----------------------+----------------------+-----------------------------------------+-------------------------------------+------------------------------+
+|         Team         | Total captain points | Total captain points when VC stepped in | Total gameweeks where VC stepped in | Gameweeks without captain/VC |
++----------------------+----------------------+-----------------------------------------+-------------------------------------+------------------------------+
+|       Team TH        |         860          |                    0                    |                  0                  |              0               |
+| La kula gjøre jobben |         782          |                    0                    |                  0                  |              0               |
+|    Red lightning     |         772          |                    0                    |                  0                  |              0               |
+|     Change Name      |         750          |                    0                    |                  0                  |              0               |
+|     Soccer MC’s      |         738          |                    0                    |                  0                  |              0               |
+|       A-laget        |         738          |                    0                    |                  0                  |              0               |
+|  8 times the charm   |         692          |                    0                    |                  0                  |              0               |
+|      Smekkbrekk      |         682          |                    12                   |                  2                  |              1               |
+|   Snakes on a Kane   |         648          |                    0                    |                  0                  |              0               |
+|   My balls are ok    |         460          |                    4                    |                  1                  |              0               |
++----------------------+----------------------+-----------------------------------------+-------------------------------------+------------------------------+
+
+
+ÅRETS CAPTAIN HINDSIGHT
+Spillerne med flest poeng UTEN kapteinspoeng
++----------------------+---------------------------------------+
+|         Team         | Total points excluding captain points |
++----------------------+---------------------------------------+
+|     Soccer MC’s      |                  1794                 |
+|       A-laget        |                  1791                 |
+| La kula gjøre jobben |                  1787                 |
+|     Change Name      |                  1722                 |
+|       Team TH        |                  1682                 |
+|      Smekkbrekk      |                  1680                 |
+|  8 times the charm   |                  1582                 |
+|   Snakes on a Kane   |                  1582                 |
+|    Red lightning     |                  1563                 |
+|   My balls are ok    |                  1316                 |
++----------------------+---------------------------------------+
+
+
+ÅRETS LENGSTE LEDER
+Spillerne som har ledet ligaen flest gameweeks
++----------------------+------------------------------------------+
+|         Team         | Total number of gameweeks in first place |
++----------------------+------------------------------------------+
+|     Soccer MC’s      |                    20                    |
+| La kula gjøre jobben |                    6                     |
+|     Change Name      |                    6                     |
+|       Team TH        |                    3                     |
+|       A-laget        |                    3                     |
+|      Smekkbrekk      |                    0                     |
+|    Red lightning     |                    0                     |
+|  8 times the charm   |                    0                     |
+|   Snakes on a Kane   |                    0                     |
+|   My balls are ok    |                    0                     |
++----------------------+------------------------------------------+
+
+
+ÅRETS LENGSTE BALLETAK
+Spillerne som har vært på sisteplass i ligaen flest gameweeks
++----------------------+-----------------------------------------+
+|         Team         | Total number of gameweeks in last place |
++----------------------+-----------------------------------------+
+|   My balls are ok    |                    38                   |
+| La kula gjøre jobben |                    0                    |
+|     Soccer MC’s      |                    0                    |
+|       Team TH        |                    0                    |
+|       A-laget        |                    0                    |
+|     Change Name      |                    0                    |
+|      Smekkbrekk      |                    0                    |
+|    Red lightning     |                    0                    |
+|  8 times the charm   |                    0                    |
+|   Snakes on a Kane   |                    0                    |
++----------------------+-----------------------------------------+
+
+
+ÅRETS STØRSTE LEDER
+Lagene som har ledet med flest poeng ligaen
++----------------------+-------------------+----------+
+|         Team         | Biggest point gap | Gameweek |
++----------------------+-------------------+----------+
+|     Soccer MC’s      |         35        |    35    |
+|     Soccer MC’s      |         31        |    31    |
+|     Soccer MC’s      |         31        |    34    |
+|     Soccer MC’s      |         29        |    17    |
+|     Soccer MC’s      |         29        |    32    |
+| La kula gjøre jobben |         27        |    38    |
+|     Soccer MC’s      |         26        |    33    |
+|     Change Name      |         23        |    9     |
+| La kula gjøre jobben |         22        |    37    |
+|     Soccer MC’s      |         20        |    30    |
++----------------------+-------------------+----------+
+
+
+ÅRETS STØRSTE BALLETAK
+Lagene som har ligget bakerst med flest poeng ligaen
++-----------------+-------------------+----------+
+|       Team      | Biggest point gap | Gameweek |
++-----------------+-------------------+----------+
+| My balls are ok |        -454       |    38    |
+| My balls are ok |        -449       |    34    |
+| My balls are ok |        -449       |    35    |
+| My balls are ok |        -436       |    36    |
+| My balls are ok |        -425       |    37    |
+| My balls are ok |        -414       |    33    |
+| My balls are ok |        -388       |    32    |
+| My balls are ok |        -384       |    31    |
+| My balls are ok |        -366       |    30    |
+| My balls are ok |        -365       |    27    |
++-----------------+-------------------+----------+
+
+
+ÅRETS GULLSTØVEL
+Spillerne som har scoret flest mål
++----------------------+--------------+
+|         Team         | Goals scored |
++----------------------+--------------+
+|       Team TH        |     119      |
+|     Soccer MC’s      |     115      |
+|       A-laget        |     110      |
+| La kula gjøre jobben |     109      |
+|     Change Name      |     107      |
+|      Smekkbrekk      |     104      |
+|    Red lightning     |     100      |
+|   Snakes on a Kane   |     100      |
+|  8 times the charm   |      87      |
+|   My balls are ok    |      64      |
++----------------------+--------------+
+
+
+ÅRETS ASSISTKONGE
+Spillerne som har flest assists
++----------------------+---------+
+|         Team         | Assists |
++----------------------+---------+
+|       A-laget        |    95   |
+|     Change Name      |    89   |
+| La kula gjøre jobben |    88   |
+|      Smekkbrekk      |    86   |
+|     Soccer MC’s      |    84   |
+|  8 times the charm   |    83   |
+|   Snakes on a Kane   |    83   |
+|    Red lightning     |    81   |
+|       Team TH        |    77   |
+|   My balls are ok    |    62   |
++----------------------+---------+
+
+
+ÅRETS MÅLRETTEDE
+Spillerne som har flest mål+assists
++----------------------+-------------------+
+|         Team         | Goal involvements |
++----------------------+-------------------+
+|       A-laget        |        205        |
+|     Soccer MC’s      |        199        |
+| La kula gjøre jobben |        197        |
+|       Team TH        |        196        |
+|     Change Name      |        196        |
+|      Smekkbrekk      |        190        |
+|   Snakes on a Kane   |        183        |
+|    Red lightning     |        181        |
+|  8 times the charm   |        170        |
+|   My balls are ok    |        126        |
++----------------------+-------------------+
+
+
+ÅRETS FORSVARSLØSE
+Spillerne som har flest mål imot fra spillende keepere og forsvarere
++----------------------+----------------------+
+|         Team         | Total goals conceded |
++----------------------+----------------------+
+|       Team TH        |         209          |
+|       A-laget        |         195          |
+|    Red lightning     |         190          |
+|     Change Name      |         186          |
+| La kula gjøre jobben |         184          |
+|   Snakes on a Kane   |         182          |
+|      Smekkbrekk      |         180          |
+|     Soccer MC’s      |         175          |
+|  8 times the charm   |         170          |
+|   My balls are ok    |         159          |
++----------------------+----------------------+
+
+
+ÅRETS SKUDDSIKRE
+Spillerne som har flest clean sheets fra spillende keepere og forsvarere
++----------------------+-------------------------------+------------------------------------------+
+|         Team         | Total clean sheets (gk + def) | Total clean sheet points (gk, def + mid) |
++----------------------+-------------------------------+------------------------------------------+
+| La kula gjøre jobben |               84              |                   393                    |
+|     Change Name      |               76              |                   376                    |
+|     Soccer MC’s      |               71              |                   353                    |
+|  8 times the charm   |               70              |                   340                    |
+|       Team TH        |               66              |                   329                    |
+|       A-laget        |               65              |                   333                    |
+|      Smekkbrekk      |               65              |                   316                    |
+|    Red lightning     |               62              |                   315                    |
+|   Snakes on a Kane   |               57              |                   282                    |
+|   My balls are ok    |               54              |                   259                    |
++----------------------+-------------------------------+------------------------------------------+
+
+
+ÅRETS KEEPER
+Spillerne som har flest strafferedninger
++----------------------+-----------------------+------------------------------+
+|         Team         | Total penalties saved | Total penalties saved points |
++----------------------+-----------------------+------------------------------+
+| La kula gjøre jobben |           0           |              0               |
+|     Soccer MC’s      |           0           |              0               |
+|       Team TH        |           0           |              0               |
+|       A-laget        |           0           |              0               |
+|     Change Name      |           0           |              0               |
+|      Smekkbrekk      |           0           |              0               |
+|    Red lightning     |           0           |              0               |
+|  8 times the charm   |           0           |              0               |
+|   Snakes on a Kane   |           0           |              0               |
+|   My balls are ok    |           0           |              0               |
++----------------------+-----------------------+------------------------------+
+
+
+ÅRETS FORMSPILLER
+Spillerne med høyest total ila. fem etterfølgende runder
++----------------------+--------------+----------------+---------------+-------------+
+|         Team         | Total points | Average points | From gameweek | To gameweek |
++----------------------+--------------+----------------+---------------+-------------+
+|     Soccer MC’s      |     451      |      90.2      |       26      |      30     |
+| La kula gjøre jobben |     446      |      89.2      |       25      |      29     |
+|       Team TH        |     443      |      88.6      |       26      |      30     |
+|     Change Name      |     442      |      88.4      |       26      |      30     |
+|  8 times the charm   |     442      |      88.4      |       25      |      29     |
+|   Snakes on a Kane   |     429      |      85.8      |       26      |      30     |
+|    Red lightning     |     424      |      84.8      |       25      |      29     |
+|      Smekkbrekk      |     418      |      83.6      |       25      |      29     |
+|       A-laget        |     407      |      81.4      |       22      |      26     |
+|   My balls are ok    |     325      |      65.0      |       26      |      30     |
++----------------------+--------------+----------------+---------------+-------------+
+
+
+ÅRETS UTE-AV-FORMSPILLER
+Spillerne med lavest total ila. fem etterfølgende runder
++----------------------+--------------+----------------+---------------+-------------+
+|         Team         | Total points | Average points | From gameweek | To gameweek |
++----------------------+--------------+----------------+---------------+-------------+
+|   My balls are ok    |     140      |      28.0      |       18      |      22     |
+|   Snakes on a Kane   |     200      |      40.0      |       3       |      7      |
+|  8 times the charm   |     201      |      40.2      |       19      |      23     |
+|      Smekkbrekk      |     237      |      47.4      |       31      |      35     |
+|       Team TH        |     239      |      47.8      |       17      |      21     |
+|     Change Name      |     254      |      50.8      |       19      |      23     |
+|    Red lightning     |     254      |      50.8      |       19      |      23     |
+|       A-laget        |     268      |      53.6      |       4       |      8      |
+| La kula gjøre jobben |     269      |      53.8      |       6       |      10     |
+|     Soccer MC’s      |     275      |      55.0      |       4       |      8      |
++----------------------+--------------+----------------+---------------+-------------+
+
+
+ÅRETS ANKER
+Minst differanse mellom beste og verste GW
++----------------------+--------------+-------------------+------------------+--------------+-------------------+
+|         Team         | Lowest range | Highest GW points | Lowest GW points | Total points | Average gw points |
++----------------------+--------------+-------------------+------------------+--------------+-------------------+
+|       A-laget        |      92      |        133        |        41        |     2529     | 66.55263157894737 |
+|   My balls are ok    |      92      |         92        |        0         |     1776     | 46.73684210526316 |
+|    Red lightning     |      96      |        126        |        30        |     2335     | 61.44736842105263 |
+|     Soccer MC’s      |     101      |        132        |        31        |     2532     | 66.63157894736842 |
+|     Change Name      |     104      |        136        |        32        |     2472     | 65.05263157894737 |
+|   Snakes on a Kane   |     108      |        131        |        23        |     2230     | 58.68421052631579 |
+|       Team TH        |     109      |        140        |        31        |     2542     | 66.89473684210526 |
+|      Smekkbrekk      |     109      |        137        |        28        |     2362     |  62.1578947368421 |
+| La kula gjøre jobben |     120      |        150        |        30        |     2569     | 67.60526315789474 |
+|  8 times the charm   |     120      |        143        |        23        |     2274     |  59.8421052631579 |
++----------------------+--------------+-------------------+------------------+--------------+-------------------+
+
+
+ÅRETS BENKESLITER
+Spillerne med mest poeng på benken (eksklusiv autoinnbyttere)
++----------------------+--------------------+
+|         Team         | Total bench points |
++----------------------+--------------------+
+|  8 times the charm   |        278         |
+|   Snakes on a Kane   |        245         |
+|    Red lightning     |        238         |
+|       Team TH        |        223         |
+|     Change Name      |        187         |
+|      Smekkbrekk      |        181         |
+|       A-laget        |        162         |
+|   My balls are ok    |        162         |
+|     Soccer MC’s      |        138         |
+| La kula gjøre jobben |        133         |
++----------------------+--------------------+
+
+
+ÅRETS SUPERINNBYTTER
+Spillerne med mest autoinnbytterpoeng
++----------------------+-----------------------+
+|         Team         | Total auto-sub points |
++----------------------+-----------------------+
+|   My balls are ok    |          210          |
+|  8 times the charm   |          107          |
+|      Smekkbrekk      |           75          |
+|       Team TH        |           69          |
+| La kula gjøre jobben |           67          |
+|    Red lightning     |           62          |
+|       A-laget        |           53          |
+|     Change Name      |           48          |
+|   Snakes on a Kane   |           42          |
+|     Soccer MC’s      |           40          |
++----------------------+-----------------------+
+
+
+ÅRETS STYGGE SPILLER
+Spillerne med flest minuspoeng for rødt+gult kort (fra spillende spillere)
++----------------------+-------------------+-----------------+--------------------+-------------+
+|         Team         | Total card points | Total red cards | Total yellow cards | Total cards |
++----------------------+-------------------+-----------------+--------------------+-------------+
+|     Soccer MC’s      |        -73        |        5        |         58         |      63     |
+|       A-laget        |        -72        |        4        |         60         |      64     |
+|   Snakes on a Kane   |        -70        |        4        |         58         |      62     |
+|  8 times the charm   |        -69        |        3        |         60         |      63     |
+|      Smekkbrekk      |        -66        |        3        |         57         |      60     |
+| La kula gjøre jobben |        -64        |        1        |         61         |      62     |
+|       Team TH        |        -62        |        4        |         50         |      54     |
+|     Change Name      |        -62        |        2        |         56         |      58     |
+|    Red lightning     |        -59        |        3        |         50         |      53     |
+|   My balls are ok    |        -38        |        0        |         38         |      38     |
++----------------------+-------------------+-----------------+--------------------+-------------+
+
+
+ÅRETS SELVEIDE
+Spillerne med flest selvmål
++----------------------+-----------------+
+|         Team         | Total own goals |
++----------------------+-----------------+
+| La kula gjøre jobben |        2        |
+|     Soccer MC’s      |        2        |
+|       Team TH        |        2        |
+|  8 times the charm   |        2        |
+|       A-laget        |        1        |
+|     Change Name      |        1        |
+|    Red lightning     |        1        |
+|   My balls are ok    |        1        |
+|      Smekkbrekk      |        0        |
+|   Snakes on a Kane   |        0        |
++----------------------+-----------------+
+
+
+ÅRETS BOMSPILLER
+Spillerne med flest straffebom
++----------------------+------------------------+
+|         Team         | Total penalties missed |
++----------------------+------------------------+
+|       A-laget        |           4            |
+|     Soccer MC’s      |           3            |
+|   Snakes on a Kane   |           3            |
+| La kula gjøre jobben |           2            |
+|       Team TH        |           2            |
+|    Red lightning     |           2            |
+|  8 times the charm   |           2            |
+|   My balls are ok    |           2            |
+|     Change Name      |           1            |
+|      Smekkbrekk      |           1            |
++----------------------+------------------------+
+
+
+ÅRETS BONUSSPILLER
+Spillerne med flest bonuspoeng
++----------------------+--------------------+-----------+
+|         Team         | Total bonus points | Total BPS |
++----------------------+--------------------+-----------+
+|       A-laget        |        255         |    8001   |
+|     Soccer MC’s      |        254         |    8087   |
+| La kula gjøre jobben |        237         |    8456   |
+|       Team TH        |        233         |    8454   |
+|      Smekkbrekk      |        232         |    7719   |
+|     Change Name      |        225         |    8383   |
+|    Red lightning     |        211         |    7727   |
+|  8 times the charm   |        209         |    7821   |
+|   Snakes on a Kane   |        204         |    7436   |
+|   My balls are ok    |        129         |    6128   |
++----------------------+--------------------+-----------+
+
+
+ÅRETS MVP
+Spillerne som har gitt mest poeng til et lag ila. sesongen, inklusive kapteinspoeng
++----------------------+--------+---------------------+
+|         Team         | Player | Total player points |
++----------------------+--------+---------------------+
+|     Soccer MC’s      | Salah  |         486         |
+|       A-laget        | Salah  |         480         |
+|     Change Name      | Salah  |         469         |
+|      Smekkbrekk      | Salah  |         467         |
+|    Red lightning     | Salah  |         464         |
+| La kula gjøre jobben | Salah  |         450         |
+|       Team TH        | Salah  |         401         |
+|   Snakes on a Kane   | Salah  |         365         |
+|  8 times the charm   | Salah  |         350         |
+|       A-laget        |  Son   |         234         |
++----------------------+--------+---------------------+
+
+
+ÅRETS BESTE DIFF
+Spillerne som har gitt mest poeng (totalt, i snitt og på én runde) for et lag
+max_ownership_share for en differential er satt til 0.3
+Utregning av diff points for hver runde: gw_points/owned_by_count --> poeng den spilleren kun gir det laget
+
+BY TOTAL DIFF POINTS
++-------------------+---------------+-------------------+--------------+----------------+---------------------+
+|        Team       |     Player    | total_diff_points | total_points | gameweek_count | avg_ownership_share |
++-------------------+---------------+-------------------+--------------+----------------+---------------------+
+|  My balls are ok  |     Lloris    |       122.5       |     148      |       34       | 0.14411764705882346 |
+|  My balls are ok  |     Jesus     |        95.0       |     100      |       17       | 0.12352941176470592 |
+|  My balls are ok  |      King     | 82.16666666666666 |      87      |       36       | 0.11388888888888893 |
+| 8 times the charm |   Robertson   |        77.5       |      88      |       10       |         0.12        |
+|  My balls are ok  |  Azpilicueta  |        73.0       |      81      |       30       | 0.11666666666666671 |
+|  My balls are ok  |      Ajer     |        70.5       |      75      |       26       | 0.11153846153846159 |
+|  My balls are ok  |     Matip     |        67.0       |      76      |       9        | 0.12222222222222223 |
+|  My balls are ok  |   Henderson   |        66.0       |      66      |       18       | 0.10000000000000003 |
+| 8 times the charm | Saint-Maximin |        63.0       |      63      |       19       | 0.10000000000000003 |
+|  My balls are ok  |    Gündogan   |        63.0       |      70      |       16       | 0.11875000000000005 |
++-------------------+---------------+-------------------+--------------+----------------+---------------------+
+
+BY AVERAGE DIFF POINTS
++----------------------+---------------+-----------------+--------------+----------------+---------------------+
+|         Team         |     Player    | avg_diff_points | total_points | gameweek_count | avg_ownership_share |
++----------------------+---------------+-----------------+--------------+----------------+---------------------+
+| La kula gjøre jobben |    Ronaldo    |       34.0      |      34      |       1        |         0.1         |
+|  8 times the charm   |   De Bruyne   |       30.0      |      60      |       1        |         0.2         |
+|  8 times the charm   |    Ronaldo    |       23.0      |      46      |       2        |         0.1         |
+|       Team TH        |    Benrahma   |       12.0      |      12      |       1        |         0.1         |
+| La kula gjøre jobben |      Zaha     |       9.5       |      19      |       2        |         0.1         |
+| La kula gjøre jobben |     Fraser    |       9.5       |      19      |       2        |         0.1         |
+|       Team TH        |    Coutinho   |       9.5       |      19      |       2        |         0.1         |
+|       Team TH        | Calvert-Lewin |       9.0       |      9       |       1        |         0.1         |
+|     Change Name      |    van Dijk   |       9.0       |      34      |       3        | 0.13333333333333333 |
+|  8 times the charm   |    Cancelo    |       9.0       |      18      |       2        |         0.1         |
++----------------------+---------------+-----------------+--------------+----------------+---------------------+
+
+BY HIGHEST SINGLE GAMEWEEK DIFF
++----------------------+-----------+-----------------+-------------------+--------------------------+
+|         Team         |   Player  | max_diff_points | max_diff_gameweek | max_diff_ownership_share |
++----------------------+-----------+-----------------+-------------------+--------------------------+
+|   My balls are ok    |  Firmino  |       40.0      |         8         |           0.1            |
+| La kula gjøre jobben |  Ronaldo  |       34.0      |         33        |           0.1            |
+|  8 times the charm   |  Ronaldo  |       32.0      |         34        |           0.1            |
+|  8 times the charm   | De Bruyne |       30.0      |         36        |           0.2            |
+|      Smekkbrekk      |   Mount   |       24.0      |         9         |           0.1            |
+|   Snakes on a Kane   |  Chilwell |       24.0      |         9         |           0.1            |
+|   My balls are ok    |   Jesus   |       24.0      |         3         |           0.1            |
+|   My balls are ok    |   Matip   |       19.0      |         29        |           0.1            |
+|  8 times the charm   | Robertson |       18.0      |         29        |           0.1            |
+| La kula gjøre jobben |    Zaha   |       17.0      |         26        |           0.1            |
++----------------------+-----------+-----------------+-------------------+--------------------------+
+
+
+ÅRETS HØYESTE RANK
+Spillerne med høyest gw+overall rank
++----------------------+-----------------+----------------------+
+|         Team         | Highest GW rank | Highest overall rank |
++----------------------+-----------------+----------------------+
+|     Soccer MC’s      |      56289      |        26850         |
+| La kula gjøre jobben |      107370     |        30746         |
+|       A-laget        |      131293     |        30901         |
+|     Change Name      |      113404     |        47089         |
+|       Team TH        |      156679     |        56706         |
+|      Smekkbrekk      |      195294     |        145150        |
+|    Red lightning     |      157496     |        187299        |
+|  8 times the charm   |      10867      |        694446        |
+|   Snakes on a Kane   |       3006      |        808035        |
+|   My balls are ok    |      197769     |       3708785        |
++----------------------+-----------------+----------------------+
+
+
+ÅRETS LAVESTE RANK
+Spillerne med lavest gw+overall rank
++----------------------+----------------+---------------------+
+|         Team         | Lowest GW rank | Lowest overall rank |
++----------------------+----------------+---------------------+
+|   My balls are ok    |    9158154     |       9158154       |
+|   Snakes on a Kane   |    8159826     |       4394432       |
+|  8 times the charm   |    7723943     |       4136590       |
+|      Smekkbrekk      |    6906028     |       1676988       |
+|       A-laget        |    5832704     |       1579026       |
+| La kula gjøre jobben |    6311863     |       1190537       |
+|    Red lightning     |    6883656     |        951797       |
+|     Soccer MC’s      |    5878282     |        701550       |
+|     Change Name      |    5497126     |        567567       |
+|       Team TH        |    5583384     |        510410       |
++----------------------+----------------+---------------------+
+
+
+ÅRETS TEMPLATE
+Managerne med likest lag som de andre (i snitt per spiller per gameweek)
++----------------------+-------------------------------------+
+|         Team         | Average player ownership percentage |
++----------------------+-------------------------------------+
+|     Change Name      |          44.631578947368425         |
+|     Soccer MC’s      |          44.24561403508771          |
+|      Smekkbrekk      |          42.03508771929823          |
+|       A-laget        |          41.614035087719294         |
+|    Red lightning     |          40.982456140350884         |
+| La kula gjøre jobben |          39.508771929824555         |
+|       Team TH        |          38.47368421052632          |
+|  8 times the charm   |          36.05263157894736          |
+|   Snakes on a Kane   |          34.385964912280706         |
+|   My balls are ok    |          17.105263157894743         |
++----------------------+-------------------------------------+
+
+
+ÅRETS VINGLEPETTER
+Managerne som har vært innom flest plasser på tabellen
++----------------------+----------------------+-----------------------+
+|         Team         | Antall unike plasser |        Plasser        |
++----------------------+----------------------+-----------------------+
+|       Team TH        |          7           | {1, 2, 3, 4, 5, 6, 7} |
+| La kula gjøre jobben |          7           | {1, 2, 3, 4, 5, 6, 7} |
+|     Change Name      |          6           |   {1, 2, 3, 4, 5, 6}  |
+|       A-laget        |          6           |   {1, 2, 3, 4, 5, 7}  |
+|     Soccer MC’s      |          5           |    {1, 2, 3, 4, 5}    |
+|      Smekkbrekk      |          5           |    {4, 5, 6, 7, 8}    |
+|    Red lightning     |          4           |      {4, 5, 6, 7}     |
+|   Snakes on a Kane   |          3           |       {8, 9, 6}       |
+|  8 times the charm   |          2           |         {8, 9}        |
+|   My balls are ok    |          1           |          {10}         |
++----------------------+----------------------+-----------------------+
+
+
+ÅRETS CHIPP-KONGE
+Mest poeng på chips
++----------------------+--------------------------------------+-------------------+-----------------------+
+|         Team         | Total chip points excluding wildcard | Total chip points | Total wildcard points |
++----------------------+--------------------------------------+-------------------+-----------------------+
+| La kula gjøre jobben |                 448                  |        580        |          132          |
+|     Soccer MC’s      |                 404                  |        541        |          137          |
+|       Team TH        |                 390                  |        485        |           95          |
+|       A-laget        |                 389                  |        524        |          135          |
+|   Snakes on a Kane   |                 384                  |        501        |          117          |
+|  8 times the charm   |                 375                  |        461        |           86          |
+|     Change Name      |                 359                  |        477        |          118          |
+|    Red lightning     |                 339                  |        499        |          160          |
+|      Smekkbrekk      |                 305                  |        381        |           76          |
+|   My balls are ok    |                  0                   |         0         |           0           |
++----------------------+--------------------------------------+-------------------+-----------------------+
+
+
+ÅRETS PIMP
+Mest hits, best hits (samme gameweek)
++----------------------+--------------------------+-------------------------+-----------------------------------+------------------------------------+-----------------+---------------------+---------------------+------------------------+
+|         Team         | Total pts earned on hits | Avg. pts earned per hit | Avg. pts for players IN with hits | Avg. pts for players OUT with hits | Total transfers | Total transfer hits | Total transfer cost | Avg. cost per transfer |
++----------------------+--------------------------+-------------------------+-----------------------------------+------------------------------------+-----------------+---------------------+---------------------+------------------------+
+| La kula gjøre jobben |            54            |    3.857142857142857    |                9.5                |         1.6428571428571428         |        46       |          14         |          56         |   1.2173913043478262   |
+|     Change Name      |            32            |    1.3333333333333333   |         7.416666666666667         |         2.0833333333333335         |        57       |          24         |          96         |   1.6842105263157894   |
+|      Smekkbrekk      |            20            |    2.857142857142857    |         8.571428571428571         |         1.7142857142857142         |        35       |          7          |          28         |          0.8           |
+|       Team TH        |            18            |    2.5714285714285716   |         7.428571428571429         |         0.8571428571428571         |        38       |          7          |          28         |   0.7368421052631579   |
+|  8 times the charm   |            7             |    0.5384615384615384   |         5.615384615384615         |         1.0769230769230769         |        45       |          13         |          52         |   1.1555555555555554   |
+|     Soccer MC’s      |            4             |           0.5           |               5.625               |               1.125                |        41       |          8          |          32         |   0.7804878048780488   |
+|   My balls are ok    |            0             |            0            |                 -                 |                 -                  |        11       |          0          |          0          |          0.0           |
+|       A-laget        |           -13            |          -1.625         |                3.5                |               1.125                |        41       |          8          |          32         |   0.7804878048780488   |
+|   Snakes on a Kane   |           -14            |           -2.0          |         4.571428571428571         |         2.5714285714285716         |        39       |          7          |          28         |   0.717948717948718    |
+|    Red lightning     |           -41            |   -2.2777777777777777   |         3.2222222222222223        |                1.5                 |        51       |          18         |          72         |   1.411764705882353    |
++----------------------+--------------------------+-------------------------+-----------------------------------+------------------------------------+-----------------+---------------------+---------------------+------------------------+
+
+
+ÅRETS HIGHSCORE
+Mest poeng på én gameweek
++----------------------+-----------------+---------------+-----------------+
+|         Team         | Gameweek points | Gameweek rank | Gameweek number |
++----------------------+-----------------+---------------+-----------------+
+| La kula gjøre jobben |       150       |     132150    |        36       |
+| La kula gjøre jobben |       143       |     284953    |        26       |
+|  8 times the charm   |       143       |     284953    |        26       |
+|       Team TH        |       140       |     371948    |        26       |
+|      Smekkbrekk      |       137       |     523651    |        26       |
+|     Change Name      |       136       |     576634    |        26       |
+|       A-laget        |       133       |     698880    |        26       |
+|     Soccer MC’s      |       132       |     751655    |        26       |
+|   Snakes on a Kane   |       131       |     806309    |        26       |
+|       Team TH        |       128       |     465973    |        36       |
++----------------------+-----------------+---------------+-----------------+
+
+
+ÅRETS LOWSCORE
+Lavest poeng på én gameweek
++----------------------+-----------------+---------------+-----------------+
+|         Team         | Gameweek points | Gameweek rank | Gameweek number |
++----------------------+-----------------+---------------+-----------------+
+|   My balls are ok    |        0        |    9158154    |        1        |
+|   My balls are ok    |        19       |    7706494    |        18       |
+|  8 times the charm   |        23       |    7723943    |        20       |
+|   Snakes on a Kane   |        23       |    8159826    |        13       |
+|   Snakes on a Kane   |        24       |    7690267    |        20       |
+|   My balls are ok    |        25       |    8510351    |        22       |
+|   Snakes on a Kane   |        27       |    6602382    |        18       |
+|      Smekkbrekk      |        28       |    6650437    |        20       |
+|   Snakes on a Kane   |        29       |    7575649    |        6        |
+| La kula gjøre jobben |        30       |    6311863    |        20       |
++----------------------+-----------------+---------------+-----------------+
+
+
+ÅRETS RUNDBRENNER
+Managerne som har vært innom flest unike spillere
++----------------------+----------------------------+
+|         Team         | Number of distinct players |
++----------------------+----------------------------+
+| La kula gjøre jobben |             82             |
+|  8 times the charm   |             82             |
+|     Change Name      |             80             |
+|    Red lightning     |             79             |
+|       Team TH        |             77             |
+|       A-laget        |             75             |
+|   Snakes on a Kane   |             74             |
+|     Soccer MC’s      |             68             |
+|      Smekkbrekk      |             66             |
+|   My balls are ok    |             26             |
++----------------------+----------------------------+
+
+
+ÅRETS SPÅMANN
+Mest poeng fra spillere byttet inn samme runde
++----------------------+--------------------------------------------------------+----------------------------------------------------------+
+|         Team         | Total points from players transferred in (the same gw) | Average points from players transferred in (the same gw) |
++----------------------+--------------------------------------------------------+----------------------------------------------------------+
+| La kula gjøre jobben |                          569                           |                    5.747474747474747                     |
+|  8 times the charm   |                          464                           |                    4.989247311827957                     |
+|     Change Name      |                          458                           |                    5.032967032967033                     |
+|   Snakes on a Kane   |                          445                           |                    5.174418604651163                     |
+|    Red lightning     |                          443                           |                           4.43                           |
+|       A-laget        |                          401                           |                    4.831325301204819                     |
+|       Team TH        |                          346                           |                    4.119047619047619                     |
+|      Smekkbrekk      |                          342                           |                    4.956521739130435                     |
+|     Soccer MC’s      |                          329                           |                    4.2727272727272725                    |
+|   My balls are ok    |                           49                           |                    4.454545454545454                     |
++----------------------+--------------------------------------------------------+----------------------------------------------------------+
+
+
+ÅRETS KARMA
+Mest poeng fra spillere byttet UT samme runde
++----------------------+---------------------------------------------------------+-----------------------------------------------------------+
+|         Team         | Total points from players transferred out (the same gw) | Average points from players transferred out (the same gw) |
++----------------------+---------------------------------------------------------+-----------------------------------------------------------+
+| La kula gjøre jobben |                           341                           |                     2.965217391304348                     |
+|  8 times the charm   |                           292                           |                     2.780952380952381                     |
+|     Change Name      |                           288                           |                     2.823529411764706                     |
+|    Red lightning     |                           273                           |                     2.256198347107438                     |
+|       A-laget        |                           227                           |                      2.63953488372093                     |
+|     Soccer MC’s      |                           193                           |                           2.4125                          |
+|   Snakes on a Kane   |                           158                           |                     1.6288659793814433                    |
+|      Smekkbrekk      |                           153                           |                     2.0675675675675675                    |
+|       Team TH        |                           133                           |                     1.4456521739130435                    |
+|   My balls are ok    |                            28                           |                     2.5454545454545454                    |
++----------------------+---------------------------------------------------------+-----------------------------------------------------------+
+
+
+ÅRETS VANILLA (ICE)
+Mest vaniljepoeng, ie. poengtotal ekskludert ekstra kapteinspoeng (inkl. TC), auto-subs og benkespillere fra bench boost
++----------------------+----------------------+--------------+----------------------+-----------------------+--------------------------------+
+|         Team         | Total vanilla points | Total points | Extra captain points | Total auto sub points | Total bench boost bench points |
++----------------------+----------------------+--------------+----------------------+-----------------------+--------------------------------+
+|     Soccer MC’s      |         1729         |     2532     |         738          |           40          |               25               |
+|       A-laget        |         1712         |     2529     |         738          |           53          |               26               |
+| La kula gjøre jobben |         1678         |     2569     |         782          |           67          |               42               |
+|     Change Name      |         1653         |     2472     |         750          |           48          |               21               |
+|      Smekkbrekk      |         1602         |     2362     |         682          |           75          |               3                |
+|       Team TH        |         1591         |     2542     |         860          |           69          |               22               |
+|   Snakes on a Kane   |         1524         |     2230     |         648          |           42          |               16               |
+|    Red lightning     |         1495         |     2335     |         772          |           62          |               6                |
+|  8 times the charm   |         1474         |     2274     |         692          |          107          |               1                |
+|   My balls are ok    |         1106         |     1776     |         460          |          210          |               0                |
++----------------------+----------------------+--------------+----------------------+-----------------------+--------------------------------+
+
+
+FERDIG!
