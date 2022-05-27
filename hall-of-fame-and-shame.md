@@ -10,6 +10,8 @@
 
 # Hall of shame
 
-| Hva                 | Team        | num      |
-| :------------------ | :--------   | ----:    |
-| Traitor award       | Steffen 	  | 2021/22  |
+| Hva                 | Team        | num                 |
+| :------------------ | :--------   | ----:               |
+| Traitor award       | Steffen 	  | 2021/22             |
+| Lavest gw rank      | Severin     | 8,159,826 (2021/22) |
+| Lavest overall rank | Steffen     | 5,049,377 (2021/22) | 
