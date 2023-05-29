@@ -5,6 +5,7 @@
 | Høyest gw-rank      | Snorre 	         | 1,010 |
 | Flest deltagelser   | Severin 	       | 14    |
 | Flest ligaseiere    | Severin, Håvard  | 3     |
+| Flest cupseire.     | Thorbjørn.       | 1     |
 | Høyest total points | Øyvind  	       | 2,569 |
 | Høyest overall rank | Steffen  	       | 2,332 |
 
