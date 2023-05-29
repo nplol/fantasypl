@@ -11,8 +11,8 @@
 
 # Hall of shame
 
-| Hva                 | Team        | num                                |
-| :------------------ | :--------   | ----:                              |
-| Traitor award       | Steffen 	  | 2021/22, 2022/23                   |
-| Lavest gw-rank      | Nico        | 11,276,170 av 11,447,257 (2022/23) |
-| Lavest overall rank | Steffen     | 5,049,377 av 9,167,407 (2021/22)   | 
+| Hva                 | Team        | num                                                              |
+| :------------------ | :--------   | ----:                                                            |
+| Traitor award       | Steffen 	  | 2021/22, 2022/23                                                 |
+| Lavest gw-rank      | Nico        | 11,276,170 av 11,447,257 (0,985054323494266 percentil) (2022/23) |
+| Lavest overall rank | Steffen     | 5,049,377 av 9,167,407 (2021/22)                                 | 
