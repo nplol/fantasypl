@@ -38,3 +38,7 @@
 
 ### 2021/22
 ![image](https://user-images.githubusercontent.com/3329750/170670014-74b763cf-93b2-4015-87eb-ee344bfe6f8b.png)
+
+### 2022/23
+<img width="787" alt="image" src="https://github.com/nplol/fantasypl/assets/3329750/bb2a697a-9e43-41cf-b6b2-82ddef19b18f">
+
