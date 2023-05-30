@@ -2,7 +2,7 @@
 
 | Hva                 | Team             | num   |
 | :------------------ | :--------        | ----: |
-| Høyest gw-rank      | Snorre 	         | 1,010 |
+| Høyest gw-rank      | Nicolay 	       | 594 av 11,447,257 (0,000051890160237 percentil) (2022/23) |
 | Flest deltagelser   | Severin 	       | 14    |
 | Flest ligaseiere    | Severin, Håvard  | 3     |
 | Flest cupseire      | Torbjørn         | 1     |
@@ -14,5 +14,5 @@
 | Hva                 | Team        | num                                                              |
 | :------------------ | :--------   | ----:                                                            |
 | Traitor award       | Steffen 	  | 2021/22, 2022/23                                                 |
-| Lavest gw-rank      | Nico        | 11,276,170 av 11,447,257 (0,985054323494266 percentil) (2022/23) |
+| Lavest gw-rank      | Nicolay     | 11,276,170 av 11,447,257 (0,985054323494266 percentil) (2022/23) |
 | Lavest overall rank | Steffen     | 5,049,377 av 9,167,407 (2021/22)                                 | 
