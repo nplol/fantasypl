@@ -42,3 +42,5 @@
 ### 2022/23
 <img width="787" alt="image" src="https://github.com/nplol/fantasypl/assets/3329750/bb2a697a-9e43-41cf-b6b2-82ddef19b18f">
 
+### 2023/24
+<img width="718" alt="image" src="https://github.com/nplol/fantasypl/assets/3329750/4858c7df-48d8-4d8e-a89a-a470215a1a97">
