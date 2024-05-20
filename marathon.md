@@ -16,3 +16,5 @@ Sortert på `5 year rolling sum`
 | 10.      | 10.(-)  | Steffen    | 1,677    | 2,182    | 2,128   | 2,437   | 2,271   | 2,316   | 1,776   | 2,277*  | 2,422   |11,062             | 19,486    |
 
 *: Deltok ikke. Penalty for ikke-deltagelse: `Laveste poengsum - 20p`
+
+Google sheet with raw data: https://docs.google.com/spreadsheets/d/137-UoJ2gj5-bD5h-LOOTsttm35dNv5QM7CocSbs0Zio/edit?usp=sharing
