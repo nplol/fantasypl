@@ -44,3 +44,6 @@
 
 ### 2023/24
 <img width="718" alt="image" src="https://github.com/nplol/fantasypl/assets/3329750/4858c7df-48d8-4d8e-a89a-a470215a1a97">
+
+### 2024/25
+<img width="747" alt="image" src="https://github.com/user-attachments/assets/3b751450-d39b-4587-a46d-0d484cc42a25" />
