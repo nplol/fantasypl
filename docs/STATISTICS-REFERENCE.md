@@ -5,16 +5,17 @@
 ## Table of Contents
 
 1. [Overview](#overview)
-2. [Performance Categories](#performance-categories)
-3. [Position & Leadership Categories](#position--leadership-categories)
-4. [Player Statistics Categories](#player-statistics-categories)
-5. [Form & Consistency Categories](#form--consistency-categories)
-6. [Squad Management Categories](#squad-management-categories)
-7. [Chip & Transfer Categories](#chip--transfer-categories)
-8. [Negative Categories](#negative-categories)
-9. [Ranking Categories](#ranking-categories)
-10. [Calculation Methods](#calculation-methods)
-11. [Data Interpretation](#data-interpretation)
+2. [Code Implementation](#code-implementation)
+3. [Performance Categories](#performance-categories)
+4. [Position & Leadership Categories](#position--leadership-categories)
+5. [Player Statistics Categories](#player-statistics-categories)
+6. [Form & Consistency Categories](#form--consistency-categories)
+7. [Squad Management Categories](#squad-management-categories)
+8. [Chip & Transfer Categories](#chip--transfer-categories)
+9. [Negative Categories](#negative-categories)
+10. [Ranking Categories](#ranking-categories)
+11. [Calculation Methods](#calculation-methods)
+12. [Data Interpretation](#data-interpretation)
 
 ---
 
@@ -39,6 +40,120 @@ Each season's statistics file contains approximately **35+ distinct categories**
 
 ---
 
+## Code Implementation
+
+### Source Location
+
+All statistics are implemented in `src/fplstats/analyzers.py` within the `LeagueAnalyzer` class.
+
+### Architecture Overview
+
+```mermaid
+graph LR
+    subgraph Input["Input Data"]
+        JSON["JSON Files"]
+        MODELS["Pydantic Models"]
+    end
+
+    subgraph Analyzer["LeagueAnalyzer"]
+        HELPER["Helper Methods"]
+        STATS["40+ Statistics Methods"]
+    end
+
+    subgraph Output["Output"]
+        ASCII["ASCII Tables"]
+        DATA["Result Objects"]
+    end
+
+    JSON --> MODELS
+    MODELS --> HELPER
+    HELPER --> STATS
+    STATS --> ASCII
+    STATS --> DATA
+```
+
+### Key Helper Methods
+
+| Method | Purpose | Used By |
+|--------|---------|---------|
+| `get_latest_gameweek()` | Returns latest finished GW | All methods |
+| `get_historic_standings()` | GW-by-GW standings | Position methods |
+| `get_gameweek_players()` | Players with points for user/GW | Player stats |
+| `get_combined_gameweek_result_for_player()` | Aggregates DGW/TGW | All player methods |
+| `get_player_gameweek_ownership_share()` | Ownership percentage | Differential |
+| `print_result()` | PrettyTable output | All methods |
+
+### Method Signature Pattern
+
+All statistics methods follow this pattern:
+
+```python
+def get_[statistic_name](self, print_result=True) -> List[ResultRow]:
+    """
+    Calculate [statistic description].
+
+    Args:
+        print_result: If True, prints ASCII table to stdout
+
+    Returns:
+        List of result rows sorted by primary metric
+    """
+```
+
+### Method-to-Category Mapping
+
+| Category (Norwegian) | Method Name | Line Range |
+|---------------------|-------------|------------|
+| Årets Visjonære | `get_gw1_picks_standings()` | ~200-350 |
+| Captain Foresight | `get_captain_foresight()` | ~350-450 |
+| Captain Hindsight | `get_captain_hindsight()` | ~450-500 |
+| Lengste Leder | `get_longest_leader()` | ~500-550 |
+| Lengste Balletak | `get_longest_loser()` | ~550-600 |
+| Største Leder | `get_biggest_leader()` | ~600-680 |
+| Største Balletak | `get_biggest_loser()` | ~680-750 |
+| Gullstøvel | `get_top_scorers()` | ~750-800 |
+| Assistkonge | `get_assist_kings()` | ~800-850 |
+| Målrettede | `get_most_goal_involvements()` | ~850-900 |
+| Forsvarsløse | `get_most_goals_conceded()` | ~900-980 |
+| Skuddsikre | `get_most_clean_sheets()` | ~980-1050 |
+| Formspiller | `get_best_streaks()` | ~1100-1180 |
+| Ute-av-formspiller | `get_worst_streaks()` | ~1180-1250 |
+| Stabile | `get_most_stable_user()` | ~1250-1320 |
+| Benkesliter | `get_most_bench_points()` | ~1320-1380 |
+| Superinnbytter | `get_most_auto_sub_points()` | ~1380-1450 |
+| Beste Diff | `get_best_differential()` | ~1550-1750 |
+| Chipp-Konge | `get_most_chip_points()` | ~1800-1900 |
+| Pimp | `get_most_hits()` | ~1900-2100 |
+| Vanilla | `get_vanilla_standings()` | ~2600-2750 |
+
+### Result Row Classes
+
+Each statistic uses a specialized result class:
+
+```python
+class ResultRow(BaseModel):
+    id: str           # User ID
+    name: str         # User name
+
+class CaptainResultRow(ResultRow):
+    total_captain_points: int
+    extra_captain_points: int
+    captain_gameweeks: int
+    vc_gameweeks: int
+
+class LongestLeaderResultRow(ResultRow):
+    first_place_count: int
+
+class BiggestLeaderResultRow(ResultRow):
+    point_gap: int
+    gameweek: int
+
+class TopScorerResultRow(ResultRow):
+    goals_scored: int
+```
+
+---
+
 ## Performance Categories
 
 ### ÅRETS VISJONÆRE (Visionary of the Year)
@@ -51,6 +166,20 @@ Each season's statistics file contains approximately **35+ distinct categories**
 | Hypothetical Total | Points accumulated by GW1 players through entire season |
 | Actual Total | Manager's actual season points |
 | Difference | Gap between hypothetical and actual |
+
+**Code Implementation:**
+```python
+# Method: LeagueAnalyzer.get_gw1_picks_standings()
+# Location: src/fplstats/analyzers.py
+
+def get_gw1_picks_standings(self, print_result=True):
+    # For each user, get GW1 picks
+    # Simulate entire season with frozen squad
+    # Apply auto-sub logic respecting formation rules:
+    #   - MIN_DEFS = 3, MIN_MIDS = 2, MIN_FWDS = 1
+    # Calculate captain/VC points
+    # Return hypothetical vs actual comparison
+```
 
 **Calculation:**
 ```
@@ -76,6 +205,20 @@ Add captain bonus from GW1 captain selection
 | Extra Points (C) | Bonus points from captain multiplier |
 | Extra Points (VC) | Bonus points from vice-captain when activated |
 | Triple Captain Points | Points from TC chip usage |
+
+**Code Implementation:**
+```python
+# Method: LeagueAnalyzer.get_captain_foresight()
+# Returns: List[CaptainResultRow]
+
+def get_captain_foresight(self, print_result=True):
+    for user in self.user_list:
+        for gw in finished_gameweeks:
+            picks = user.history[gw].picks
+            captain = [p for p in picks if p.is_captain][0]
+            # Extra points = (multiplier - 1) * player_points
+            extra_captain_points += (captain.multiplier - 1) * captain_gw_points
+```
 
 **Calculation:**
 ```
@@ -644,6 +787,29 @@ percentile = (rank / total_players) × 100
 | Base Points | Points without chips/captain |
 | No Captain Bonus | Excluding captain multiplier |
 | No Chip Boost | Excluding chip benefits |
+
+**Code Implementation:**
+```python
+# Method: LeagueAnalyzer.get_vanilla_standings()
+# Location: src/fplstats/analyzers.py (~line 2600)
+
+def get_vanilla_standings(self, print_result=True):
+    for user in self.user_list:
+        total_points = league_standings[user.id].total
+
+        # Subtract captain bonus (already calculated)
+        extra_captain_pts = get_captain_foresight_results[user.id]
+
+        # Subtract auto-sub points
+        auto_sub_pts = get_most_auto_sub_points_results[user.id]
+
+        # Subtract bench boost points (if used)
+        bench_boost_pts = calculate_bench_boost_bonus(user)
+
+        vanilla_points = total_points - extra_captain_pts - auto_sub_pts - bench_boost_pts
+
+    return sorted(results, key=lambda x: x.vanilla_points, reverse=True)
+```
 
 **Calculation:**
 ```

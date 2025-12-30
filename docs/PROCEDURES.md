@@ -5,13 +5,16 @@
 ## Table of Contents
 
 1. [Overview](#overview)
-2. [Annual Workflow](#annual-workflow)
-3. [Season-End Statistics Generation](#season-end-statistics-generation)
-4. [Marathon Table Update](#marathon-table-update)
-5. [Hall of Fame Update](#hall-of-fame-update)
-6. [Cup Documentation](#cup-documentation)
-7. [Data Validation](#data-validation)
-8. [Troubleshooting](#troubleshooting)
+2. [Development Setup](#development-setup)
+3. [Annual Workflow](#annual-workflow)
+4. [Data Fetching Procedure](#data-fetching-procedure)
+5. [Season-End Statistics Generation](#season-end-statistics-generation)
+6. [Marathon Table Update](#marathon-table-update)
+7. [Hall of Fame Update](#hall-of-fame-update)
+8. [Cup Documentation](#cup-documentation)
+9. [Data Validation](#data-validation)
+10. [CLI Reference](#cli-reference)
+11. [Troubleshooting](#troubleshooting)
 
 ---
 
@@ -28,6 +31,138 @@ This document outlines the standard operating procedures for maintaining the NPL
 | Hall of Fame Update | Admin | - | When records broken |
 | Cup Documentation | Admin | - | Annual |
 | Repository Maintenance | Admin | - | As needed |
+
+---
+
+## Development Setup
+
+### Prerequisites
+
+- Python 3.13 (use `pyenv` for version management)
+- pip and virtualenv
+- FPL account credentials
+- Browser access for cookie extraction
+
+### Installation
+
+```bash
+# Navigate to src directory
+cd /path/to/fantasypl/src
+
+# Create virtual environment
+python -m venv env
+
+# Activate environment
+source env/bin/activate  # macOS/Linux
+# or
+.\env\Scripts\activate   # Windows
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+### Dependencies
+
+| Package | Version | Purpose |
+|---------|---------|---------|
+| fpl | 0.6.35 | FPL API client |
+| pydantic | 1.8.1 | Data validation |
+| prettytable | 2.1.0 | ASCII table output |
+| mypy | 0.930 | Type checking |
+| black | 21.5b0 | Code formatting |
+| flake8 | 3.9.1 | Linting |
+
+### Cookie Extraction
+
+To fetch data from FPL, you need a browser cookie:
+
+1. Log in to https://fantasy.premierleague.com
+2. Open browser Developer Tools (F12)
+3. Go to Console tab
+4. Execute: `document.cookie`
+5. Copy the entire output string
+
+---
+
+## Data Fetching Procedure
+
+### Overview
+
+The `fetch_league.py` script collects league data from the official FPL API and stores it locally as JSON files.
+
+### Fetch Workflow
+
+```mermaid
+flowchart TD
+    A[Start] --> B[Authenticate with FPL API]
+    B --> C[Fetch league metadata]
+    C --> D[Fetch gameweek data]
+    D --> E[Loop: For each manager]
+    E --> F[Fetch user history]
+    F --> G[Fetch picks per gameweek]
+    G --> H[Fetch auto-subs & chips]
+    H --> I{More managers?}
+    I -->|Yes| E
+    I -->|No| J[Fetch player data]
+    J --> K[Write JSON files]
+    K --> L[End]
+
+    style A fill:#27ae60,color:#fff
+    style L fill:#3498db,color:#fff
+```
+
+### Running the Fetch Script
+
+```bash
+cd /path/to/fantasypl/src
+
+# Basic fetch (incremental - only new gameweeks)
+python scripts/fetch_league.py \
+    --league=1026627 \
+    --email=your.email@example.com \
+    --cookie="YOUR_COOKIE_STRING"
+
+# Force fetch all data (re-download everything)
+python scripts/fetch_league.py \
+    --league=1026627 \
+    --email=your.email@example.com \
+    --cookie="YOUR_COOKIE_STRING" \
+    --force-fetch-all
+
+# Fetch including live/current gameweek
+python scripts/fetch_league.py \
+    --league=1026627 \
+    --email=your.email@example.com \
+    --cookie="YOUR_COOKIE_STRING" \
+    --fetch-live
+```
+
+### Output Files
+
+After running `fetch_league.py`, the following files are created:
+
+```
+src/data/{season}/{league_id}/
+├── league.json      # League metadata and standings
+├── gameweeks.json   # All 38 gameweeks info
+├── user_list.json   # Simple manager list
+├── users.json       # Complete manager data with history
+└── players.json     # All players selected by league members
+```
+
+### Rate Limiting
+
+The script implements automatic rate limiting:
+- 4-second delay between user API calls
+- 2-second delay between player fetches
+- Prevents 429 (Too Many Requests) errors
+
+### Incremental Fetching
+
+By default, the script only fetches new gameweeks:
+- Checks existing data for latest fetched gameweek
+- Only fetches gameweeks after that point
+- Use `--force-fetch-all` to override
 
 ---
 
@@ -101,26 +236,50 @@ flowchart TD
 #### Step 2: Run Statistics Generator
 
 ```bash
-# Navigate to fplstats tool
-cd /path/to/fplstats
+# Navigate to src directory
+cd /path/to/fantasypl/src
 
-# Run against league
-python fplstats.py --league-id [LEAGUE_ID] --season [YEAR]
+# Activate virtual environment
+source env/bin/activate
+
+# Run the analysis script
+python scripts/analyze_league.py \
+    --season=2024_2025 \
+    --league=1026627 \
+    --disable-prompt
+
+# Or redirect output to file
+python scripts/analyze_league.py \
+    --season=2024_2025 \
+    --league=1026627 \
+    --disable-prompt > ../statistics/2024_2025.txt
 ```
+
+**Command Options:**
+| Flag | Description |
+|------|-------------|
+| `--season` | Season identifier (format: YYYY_YYYY) |
+| `--league` | FPL league ID |
+| `--disable-prompt` | Skip Enter prompts between stats |
+| `--live` | Include ongoing gameweek data |
 
 **Output:**
 - Statistics file generated
 - ~750 lines of ASCII-formatted tables
 - 35+ statistical categories
 
-#### Step 3: Export Statistics File
+#### Step 3: Verify and Export Statistics File
 
 ```bash
-# Copy output to repository
-cp output/statistics.txt /path/to/fantasypl/statistics/YYYY_YYYY.txt
+# If not already redirected, copy the generated output
+# The script outputs directly to stdout
 
-# Example for 2024/25 season
-cp output/statistics.txt /path/to/fantasypl/statistics/2024_2025.txt
+# Verify the output file
+wc -l ../statistics/2024_2025.txt
+# Should be approximately 750 lines
+
+head -50 ../statistics/2024_2025.txt
+# Check formatting and first few categories
 ```
 
 **File Naming Convention:**
@@ -449,6 +608,118 @@ git commit -m "Update cup.md"
 3. **Formatting Errors:**
    - Check for special characters
    - Verify ASCII table alignment
+
+---
+
+## CLI Reference
+
+### fetch_league.py
+
+**Purpose:** Fetch league data from FPL API and store locally
+
+```bash
+python scripts/fetch_league.py [OPTIONS]
+```
+
+| Option | Short | Required | Description |
+|--------|-------|----------|-------------|
+| `--league` | `-l` | Yes | FPL league ID |
+| `--email` | `-e` | Yes | FPL account email |
+| `--cookie` | `-c` | Yes | Browser cookie from FPL |
+| `--password` | `-p` | No | FPL password (prompted if omitted) |
+| `--force-fetch-all` | | No | Re-download all data |
+| `--fetch-live` | | No | Include current gameweek |
+
+**Examples:**
+
+```bash
+# Weekly incremental fetch
+python scripts/fetch_league.py -l 1026627 -e user@mail.com -c "cookie"
+
+# End-of-season full fetch
+python scripts/fetch_league.py -l 1026627 -e user@mail.com -c "cookie" --force-fetch-all
+
+# Mid-gameweek live fetch
+python scripts/fetch_league.py -l 1026627 -e user@mail.com -c "cookie" --fetch-live
+```
+
+### analyze_league.py
+
+**Purpose:** Generate comprehensive statistics from fetched data
+
+```bash
+python scripts/analyze_league.py [OPTIONS]
+```
+
+| Option | Short | Required | Description |
+|--------|-------|----------|-------------|
+| `--season` | `-s` | Yes | Season (YYYY_YYYY format) |
+| `--league` | `-l` | Yes | FPL league ID |
+| `--disable-prompt` | | No | Skip Enter prompts |
+| `--live` | | No | Include current gameweek |
+
+**Examples:**
+
+```bash
+# Interactive analysis (prompts between stats)
+python scripts/analyze_league.py -s 2024_2025 -l 1026627
+
+# Non-interactive (for file output)
+python scripts/analyze_league.py -s 2024_2025 -l 1026627 --disable-prompt > output.txt
+
+# Live analysis during season
+python scripts/analyze_league.py -s 2024_2025 -l 1026627 --live
+```
+
+### Python API Usage
+
+You can also use the `LeagueAnalyzer` class directly:
+
+```python
+from fplstats.analyzers import LeagueAnalyzer
+
+# Initialize analyzer
+analyzer = LeagueAnalyzer(
+    season="2024_2025",
+    league_id=1026627,
+    disable_prompt=True,
+    live=False
+)
+
+# Run all statistics
+analyzer.get_all_statistics()
+
+# Or run individual methods
+captain_data = analyzer.get_captain_foresight(print_result=False)
+streaks = analyzer.get_best_streaks(print_result=False)
+vanilla = analyzer.get_vanilla_standings(print_result=False)
+```
+
+### Available Statistics Methods
+
+| Method | Norwegian Name | Description |
+|--------|---------------|-------------|
+| `get_gw1_picks_standings()` | Årets Visjonære | What-if GW1 frozen picks |
+| `get_captain_foresight()` | Captain Foresight | Captain bonus points |
+| `get_captain_hindsight()` | Captain Hindsight | Points without captain |
+| `get_longest_leader()` | Lengste Leder | Most GWs in 1st place |
+| `get_longest_loser()` | Lengste Balletak | Most GWs in last place |
+| `get_biggest_leader()` | Største Leder | Largest point gap when leading |
+| `get_biggest_loser()` | Største Balletak | Largest deficit when last |
+| `get_top_scorers()` | Gullstøvel | Most goals by owned players |
+| `get_assist_kings()` | Assistkonge | Most assists by owned players |
+| `get_most_goal_involvements()` | Målrettede | Goals + assists |
+| `get_most_goals_conceded()` | Forsvarsløse | Goals conceded |
+| `get_most_clean_sheets()` | Skuddsikre | Clean sheets earned |
+| `get_best_streaks()` | Formspiller | Best 5-GW window |
+| `get_worst_streaks()` | Ute-av-formspiller | Worst 5-GW window |
+| `get_most_stable_user()` | Stabile | Smallest GW variance |
+| `get_most_bench_points()` | Benkesliter | Points on bench |
+| `get_most_auto_sub_points()` | Superinnbytter | Auto-sub points |
+| `get_best_differential()` | Beste Diff | Low-ownership returns |
+| `get_most_chip_points()` | Chipp-Konge | Chip usage points |
+| `get_most_hits()` | Pimp | Transfer hit analysis |
+| `get_vanilla_standings()` | Vanilla | Raw points no chips |
 
 ---
 
