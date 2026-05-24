@@ -15,6 +15,7 @@ Endpoints:
 from __future__ import annotations
 
 import os
+import re
 import sys
 from enum import Enum
 from pathlib import Path
@@ -117,15 +118,24 @@ COLUMN_LABELS: Dict[str, str] = {
     "worst_streak_start_gw": "Streak start GW",
     "best_streak_end_gw": "Streak end GW",
     "worst_streak_end_gw": "Streak end GW",
+    "gameweek_number": "GW",
+    "gameweek_points": "GW points",
+    "gameweek_rank": "GW rank",
     "gw_diff": "GW spread",
     "best_gw": "Best GW",
     "worst_gw": "Worst GW",
     "best_gw_points": "Best GW points",
     "worst_gw_points": "Worst GW points",
-    "highest_gw_rank": "Highest GW rank",
-    "lowest_gw_rank": "Lowest GW rank",
-    "highest_overall_rank": "Highest overall rank",
-    "lowest_overall_rank": "Lowest overall rank",
+    "highest_gw_rank": "Best GW rank",
+    "lowest_gw_rank": "Worst GW rank",
+    "highest_overall_rank": "Best overall rank",
+    "lowest_overall_rank": "Worst overall rank",
+    "highest_gw": "Best GW",
+    "lowest_gw": "Worst GW",
+    "highest_gw_rank_gw": "GW",
+    "lowest_gw_rank_gw": "GW",
+    "highest_overall_rank_gw": "GW",
+    "lowest_overall_rank_gw": "GW",
     "template_percentage": "Template %",
     "template_share": "Template %",
     "distinct_league_positions": "Distinct positions",
@@ -164,6 +174,7 @@ COLUMN_LABELS: Dict[str, str] = {
     "vice_captain_name": "Vice captain",
     "captain_vc_names": "Captain / VC",
     "gw1_player_names": "GW1 picks",
+    "squad": "GW1 squad",
 }
 
 # Keys we never want to show — internal/foreign IDs and "detail blob" payloads
@@ -173,6 +184,24 @@ HIDDEN_KEYS = {
     "distinct_players",  # huge list of player ids; total_players holds the count
     "gameweeks",  # per-GW breakdown blob in get_best_differential; not table-friendly
     "position_set",  # raw set of league positions; we have distinct_positions
+    "gw1_player_names",  # flat string; we replace it with a structured `squad` field
+    # GW context for paired value columns — rendered as inline "@ GW N" suffix
+    # on the paired value cell by the frontend. See SIBLING_GW_KEYS below.
+    "highest_gw", "lowest_gw",
+    "highest_gw_rank_gw", "lowest_gw_rank_gw",
+    "highest_overall_rank_gw", "lowest_overall_rank_gw",
+}
+
+# Maps a value column key to the row key holding "what GW it happened on".
+# The frontend reads this from `meta.sibling_gw_keys` to render the value
+# cell as e.g. "91 @ GW33" — keeps tables narrow on mobile.
+SIBLING_GW_KEYS: Dict[str, str] = {
+    "highest_gw_points": "highest_gw",
+    "lowest_gw_points": "lowest_gw",
+    "highest_gw_rank": "highest_gw_rank_gw",
+    "lowest_gw_rank": "lowest_gw_rank_gw",
+    "highest_overall_rank": "highest_overall_rank_gw",
+    "lowest_overall_rank": "lowest_overall_rank_gw",
 }
 
 
@@ -196,46 +225,303 @@ def _normalize(value: Any) -> Any:
     return value
 
 
+# Column display priority. Lower number = further left. Keys without an entry
+# fall to the middle (10) and otherwise keep their natural insertion order.
+# Goal: on a narrow mobile column, the most important context is visible first.
+COLUMN_PRIORITY: Dict[str, int] = {
+    "name": 0, "user_name": 0, "team_name": 0,
+    "player_name": 1,
+    "gameweek_number": 2, "gameweek": 2, "event": 2, "gw": 2,
+    "max_diff_gameweek": 3, "best_hits_gameweek": 3,
+    "best_streak_start_gw": 3, "worst_streak_start_gw": 3,
+    "best_gw": 3, "worst_gw": 3,
+    # Pair-context: GW for highest/lowest score & rank stats. Each "GW" column
+    # sits immediately to the LEFT of its sibling value column.
+    "highest_gw": 4, "lowest_gw": 4,
+    "highest_gw_rank_gw": 4, "lowest_gw_rank_gw": 4,
+    "highest_overall_rank_gw": 4, "lowest_overall_rank_gw": 4,
+    # everything else: 10
+    "squad": 90,  # heavy column; push to the right of the table
+}
+
+
 def _columns_for(rows: List[Dict[str, Any]]) -> List[Dict[str, str]]:
     """Pick a stable, ordered column list from the first non-empty row.
 
     Drops keys in HIDDEN_KEYS, and any column whose first value is a
-    list-of-dicts (too complex to render as a single cell)."""
+    list-of-dicts (too complex to render as a single cell). Reorders by
+    COLUMN_PRIORITY so team-name + key context come first on narrow screens."""
     if not rows:
         return []
     first = next((r for r in rows if isinstance(r, dict)), None)
     if first is None:
         return []
-    cols = []
-    for key, value in first.items():
+    candidate: List[Tuple[int, int, str]] = []
+    for i, (key, value) in enumerate(first.items()):
         if key in HIDDEN_KEYS:
             continue
-        if isinstance(value, list) and value and isinstance(value[0], dict):
+        # `squad` is a list-of-dicts but we want to render it; let it through.
+        if key != "squad" and isinstance(value, list) and value and isinstance(value[0], dict):
             continue
-        cols.append({"key": key, "label": COLUMN_LABELS.get(key, key.replace("_", " ").title())})
-    return cols
+        candidate.append((COLUMN_PRIORITY.get(key, 10), i, key))
+    candidate.sort()
+    return [
+        {"key": key, "label": COLUMN_LABELS.get(key, key.replace("_", " ").title())}
+        for (_, _, key) in candidate
+    ]
+
+
+_POSITION_LABEL = {1: "GK", 2: "DEF", 3: "MID", 4: "FWD", 5: "MGR"}
+_POSITION_ORDER = [1, 2, 3, 4, 5]
+
+
+def _user_gw_extremes(analyzer: "LeagueAnalyzer") -> Dict[str, Dict[str, Any]]:
+    """For every user, find which GW produced their best/worst points and rank.
+
+    Skips GWs with no live matches (gameweeks where highest_score == 0) and
+    GWs that aren't finished yet (rank is None) — same filtering the analyzer
+    uses in get_least_gw_points / get_most_gw_points."""
+    out: Dict[str, Dict[str, Any]] = {}
+    gameweeks_by_event = {g.id: g for g in analyzer.gameweeks}
+    for uid, user in analyzer.users.items():
+        best_pts = best_pts_gw = None
+        worst_pts = worst_pts_gw = None
+        best_gw_rank = best_gw_rank_gw = None
+        worst_gw_rank = worst_gw_rank_gw = None
+        best_overall_rank = best_overall_rank_gw = None
+        worst_overall_rank = worst_overall_rank_gw = None
+        for h in user.history:
+            gw = gameweeks_by_event.get(h.event)
+            if not gw or gw.highest_score == 0 or h.rank is None:
+                continue
+            if best_pts is None or h.points > best_pts:
+                best_pts, best_pts_gw = h.points, h.event
+            if worst_pts is None or h.points < worst_pts:
+                worst_pts, worst_pts_gw = h.points, h.event
+            if h.rank is not None and (best_gw_rank is None or h.rank < best_gw_rank):
+                best_gw_rank, best_gw_rank_gw = h.rank, h.event
+            if h.rank is not None and (worst_gw_rank is None or h.rank > worst_gw_rank):
+                worst_gw_rank, worst_gw_rank_gw = h.rank, h.event
+            if best_overall_rank is None or h.overall_rank < best_overall_rank:
+                best_overall_rank, best_overall_rank_gw = h.overall_rank, h.event
+            if worst_overall_rank is None or h.overall_rank > worst_overall_rank:
+                worst_overall_rank, worst_overall_rank_gw = h.overall_rank, h.event
+        out[uid] = {
+            "best_pts_gw": best_pts_gw,
+            "worst_pts_gw": worst_pts_gw,
+            "best_gw_rank_gw": best_gw_rank_gw,
+            "worst_gw_rank_gw": worst_gw_rank_gw,
+            "best_overall_rank_gw": best_overall_rank_gw,
+            "worst_overall_rank_gw": worst_overall_rank_gw,
+        }
+    return out
+
+
+def _insert_after(row: Dict[str, Any], anchor_key: str, new_key: str, value: Any) -> Dict[str, Any]:
+    """Returns a copy of `row` with `new_key` inserted immediately after `anchor_key`."""
+    new: Dict[str, Any] = {}
+    for k, v in row.items():
+        new[k] = v
+        if k == anchor_key:
+            new[new_key] = value
+    if new_key not in new:
+        new[new_key] = value
+    return new
+
+
+def _augment_stable(rows: List[Dict[str, Any]], extremes: Dict[str, Dict[str, Any]]) -> List[Dict[str, Any]]:
+    out = []
+    for row in rows:
+        if not isinstance(row, dict):
+            out.append(row)
+            continue
+        uid = row.get("user_id") or row.get("id")
+        e = extremes.get(uid, {}) if uid else {}
+        r = _insert_after(row, "highest_gw_points", "highest_gw", e.get("best_pts_gw"))
+        r = _insert_after(r, "lowest_gw_points", "lowest_gw", e.get("worst_pts_gw"))
+        out.append(r)
+    return out
+
+
+def _augment_highest_rank(rows: List[Dict[str, Any]], extremes: Dict[str, Dict[str, Any]]) -> List[Dict[str, Any]]:
+    out = []
+    for row in rows:
+        if not isinstance(row, dict):
+            out.append(row)
+            continue
+        uid = row.get("user_id") or row.get("id")
+        e = extremes.get(uid, {}) if uid else {}
+        r = _insert_after(row, "highest_gw_rank", "highest_gw_rank_gw", e.get("best_gw_rank_gw"))
+        r = _insert_after(r, "highest_overall_rank", "highest_overall_rank_gw", e.get("best_overall_rank_gw"))
+        out.append(r)
+    return out
+
+
+def _augment_lowest_rank(rows: List[Dict[str, Any]], extremes: Dict[str, Dict[str, Any]]) -> List[Dict[str, Any]]:
+    out = []
+    for row in rows:
+        if not isinstance(row, dict):
+            out.append(row)
+            continue
+        uid = row.get("user_id") or row.get("id")
+        e = extremes.get(uid, {}) if uid else {}
+        r = _insert_after(row, "lowest_gw_rank", "lowest_gw_rank_gw", e.get("worst_gw_rank_gw"))
+        r = _insert_after(r, "lowest_overall_rank", "lowest_overall_rank_gw", e.get("worst_overall_rank_gw"))
+        out.append(r)
+    return out
+
+
+def _augment_gw1_picks(rows: List[Dict[str, Any]], analyzer: "LeagueAnalyzer") -> List[Dict[str, Any]]:
+    """Rebuilds the GW1 squad string into a structured array sorted GK→DEF→MID→FWD.
+
+    The analyzer returns `gw1_player_names` as a single flat string with newlines
+    between position groups. We pull the per-player season-long "what-if" totals
+    out of that string by regex (`(NN)` after each name) and zip them back onto
+    each user's raw GW1 picks from analyzer.users[uid].history[0].picks. This
+    guarantees position-sorted output regardless of the order FPL returns picks
+    in, and gives the frontend a structured payload to render."""
+    new_rows: List[Dict[str, Any]] = []
+    for row in rows:
+        if not isinstance(row, dict):
+            new_rows.append(row)
+            continue
+        uid = row.get("user_id")
+        squad: List[Dict[str, Any]] = []
+        user = analyzer.users.get(uid) if uid else None
+        if user and user.history and user.history[0].picks:
+            picks = user.history[0].picks
+            # Only digit-bearing parens get matched; "(C)"/"(VC)" are skipped.
+            points_list = [int(m) for m in re.findall(r"\((\d+)\)", row.get("gw1_player_names") or "")]
+            if len(points_list) < len(picks):
+                points_list = points_list + [0] * (len(picks) - len(points_list))
+
+            starters_by_pos: Dict[int, List[Dict[str, Any]]] = {p: [] for p in _POSITION_ORDER}
+            bench: List[Dict[str, Any]] = []
+            for i, pick in enumerate(picks):
+                player = analyzer.players.get(pick.element)
+                if not player:
+                    continue
+                cap = "(C)" if pick.is_captain else "(VC)" if pick.is_vice_captain else ""
+                entry = {
+                    "name": player.web_name,
+                    "captain": cap,
+                    "points": points_list[i] if i < len(points_list) else 0,
+                }
+                pos_val = player.element_type.value  # Enum -> int (1..5)
+                if i < 11:
+                    starters_by_pos.setdefault(pos_val, []).append(entry)
+                else:
+                    bench.append(entry)
+
+            for pos in _POSITION_ORDER:
+                if starters_by_pos.get(pos):
+                    squad.append({"pos": _POSITION_LABEL[pos], "players": starters_by_pos[pos]})
+            if bench:
+                squad.append({"pos": "Bench", "players": bench})
+
+        # Rebuild the row preserving column order; substitute gw1_player_names -> squad.
+        new_row: Dict[str, Any] = {}
+        inserted = False
+        for k, v in row.items():
+            if k == "gw1_player_names":
+                new_row["squad"] = squad
+                inserted = True
+            else:
+                new_row[k] = v
+        if not inserted:
+            new_row["squad"] = squad
+        new_rows.append(new_row)
+    return new_rows
+
+
+# Substring-based team tagging. Lowercase substring match against team_name
+# handles variants like "Redlightning" vs "Red Lightning" across seasons, and
+# curly vs straight apostrophes in "Soccer MC's".
+TEAM_PILL_RULES: List[Tuple[str, str]] = [
+    ("redlight", "YouTube"),
+    ("red lightning", "YouTube"),
+    ("soccer mc", "YouTube"),
+    ("pc bears", "YouTube"),
+    ("sisteplass", "YouTube"),
+    ("siste plass", "YouTube"),
+    ("midten", "AI"),
+]
+
+
+def _pills_for_team(name: str) -> List[str]:
+    name_l = (name or "").lower()
+    pills: List[str] = []
+    for sub, label in TEAM_PILL_RULES:
+        if sub in name_l and label not in pills:
+            pills.append(label)
+    return pills
+
+
+def _team_tags(analyzer: "LeagueAnalyzer") -> Dict[str, Dict[str, Any]]:
+    """Returns {user_id: {place, name, pills}} from final league standings."""
+    tags: Dict[str, Dict[str, Any]] = {}
+    for s in analyzer.league.standings:
+        tags[s.entry] = {
+            "place": s.rank,
+            "name": s.entry_name,
+            "pills": _pills_for_team(s.entry_name),
+        }
+    return tags
 
 
 _ANALYZER_CACHE: Dict[Tuple[str, int], LeagueAnalyzer] = {}
+_STATS_CACHE: Dict[Tuple[str, int], Dict[str, Any]] = {}
+# Cached mtime per (season, league) so we can invalidate when fetch_league
+# rewrites the JSON. users.json is the heaviest file rewritten on every fetch.
+_CACHE_MTIME: Dict[Tuple[str, int], float] = {}
+
+
+def _data_mtime(season: str, league_id: int) -> float:
+    """Returns the newest mtime across the source files for a league.
+
+    If any of these files has been rewritten (e.g. by fetch_league.py), the
+    cached analyzer + stats are stale and need to be rebuilt."""
+    base = SRC_DIR / "data" / season / str(league_id)
+    paths = [base / "users.json", base / "players.json", base / "gameweeks.json", base / "league.json"]
+    newest = 0.0
+    for p in paths:
+        try:
+            m = p.stat().st_mtime
+            if m > newest:
+                newest = m
+        except OSError:
+            pass
+    return newest
+
+
+def _invalidate_if_stale(key: Tuple[str, int]) -> None:
+    season, league_id = key
+    current = _data_mtime(season, league_id)
+    cached = _CACHE_MTIME.get(key)
+    if cached is not None and current > cached:
+        _ANALYZER_CACHE.pop(key, None)
+        _STATS_CACHE.pop(key, None)
+        _CACHE_MTIME.pop(key, None)
 
 
 def _get_analyzer(season: str, league_id: int) -> LeagueAnalyzer:
     key = (season, league_id)
+    _invalidate_if_stale(key)
     if key not in _ANALYZER_CACHE:
         _ANALYZER_CACHE[key] = LeagueAnalyzer(season, league_id, disable_prompt=True)
+        _CACHE_MTIME[key] = _data_mtime(season, league_id)
     return _ANALYZER_CACHE[key]
-
-
-_STATS_CACHE: Dict[Tuple[str, int], Dict[str, Any]] = {}
 
 
 def _build_stats(season: str, league_id: int) -> Dict[str, Any]:
     key = (season, league_id)
+    _invalidate_if_stale(key)
     if key in _STATS_CACHE:
         return _STATS_CACHE[key]
 
     analyzer = _get_analyzer(season, league_id)
     latest_gw = analyzer.get_latest_gameweek()
+    extremes = _user_gw_extremes(analyzer)
 
     sections: List[Dict[str, Any]] = []
     for section in STAT_SECTIONS:
@@ -249,6 +535,14 @@ def _build_stats(season: str, league_id: int) -> Dict[str, Any]:
                 raw = raw[section["tuple_index"]]
             normalized = _normalize(raw)
             rows = normalized if isinstance(normalized, list) else []
+            if method_name == "get_gw1_picks_standings":
+                rows = _augment_gw1_picks(rows, analyzer)
+            elif method_name == "get_most_stable_user":
+                rows = _augment_stable(rows, extremes)
+            elif method_name == "get_highest_rank":
+                rows = _augment_highest_rank(rows, extremes)
+            elif method_name == "get_lowest_rank":
+                rows = _augment_lowest_rank(rows, extremes)
             sections.append({
                 "title": section["title"],
                 "subtitle": section["subtitle"],
@@ -273,6 +567,8 @@ def _build_stats(season: str, league_id: int) -> Dict[str, Any]:
             "league_name": analyzer.league.name,
             "latest_gameweek": latest_gw.id,
             "latest_gameweek_finished": latest_gw.finished,
+            "team_tags": _team_tags(analyzer),
+            "sibling_gw_keys": SIBLING_GW_KEYS,
         },
         "sections": sections,
     }
@@ -318,6 +614,17 @@ app = Flask(__name__)
 # ProxyFix reads that header into SCRIPT_NAME so url_for emits /nplol/static/...
 # automatically. No-op when hit directly on :5000 (header absent).
 app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1, x_prefix=1)
+
+
+@app.context_processor
+def _inject_asset_version() -> Dict[str, str]:
+    """File-mtime cache buster for static assets — phones cache JS aggressively."""
+    static_dir = Path(app.static_folder or "static")
+    try:
+        mtimes = [(static_dir / f).stat().st_mtime for f in ("app.js", "style.css")]
+        return {"asset_v": str(int(max(mtimes)))}
+    except (FileNotFoundError, OSError):
+        return {"asset_v": "0"}
 
 
 @app.route("/")

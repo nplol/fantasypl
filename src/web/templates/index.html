@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NPLOL Statistikk</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}?v={{ asset_v }}" />
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -58,14 +58,18 @@
     <div id="sections" class="grid grid-cols-1 md:grid-cols-2 gap-5"></div>
   </main>
 
-  <!-- Floating quick-jump menu, anchored bottom-right -->
+  <!-- Floating quick-jump menu, anchored bottom-right. Open state controlled
+       entirely from JS via the .is-open class on #jump-root. -->
   <div id="jump-root" class="hidden fixed bottom-6 right-6 z-40">
     <button id="jump-toggle" type="button" aria-expanded="false" aria-controls="jump-panel"
             class="w-12 h-12 rounded-full bg-gold text-ink shadow-lg flex items-center justify-center font-bold hover:scale-105 transition">
       ☰
     </button>
-    <div id="jump-panel" class="hidden absolute bottom-14 right-0 w-72 max-h-[70vh] overflow-y-auto bg-inkSoft border border-edge rounded-lg shadow-xl py-2">
-      <div class="px-3 py-1 text-xs uppercase tracking-widest text-slate-400 border-b border-edge mb-2">Hopp til</div>
+    <div id="jump-panel" class="absolute bottom-14 right-0 w-72 max-h-[70vh] overflow-y-auto bg-inkSoft border border-edge rounded-lg shadow-xl py-2">
+      <div class="flex items-center justify-between px-3 py-1 text-xs uppercase tracking-widest text-slate-400 border-b border-edge mb-2">
+        <span>Hopp til</span>
+        <button id="jump-close" type="button" class="text-slate-400 hover:text-gold text-lg leading-none" aria-label="Lukk">×</button>
+      </div>
       <ul id="jump-list" class="text-sm"></ul>
     </div>
   </div>
@@ -78,6 +82,6 @@
   </footer>
 
   <script>window.__BASE = {{ request.script_root | tojson }};</script>
-  <script src="{{ url_for('static', filename='app.js') }}"></script>
+  <script src="{{ url_for('static', filename='app.js') }}?v={{ asset_v }}"></script>
 </body>
 </html>

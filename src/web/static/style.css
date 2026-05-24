@@ -136,7 +136,169 @@ body {
   border-left-color: #f5c054;
 }
 
-#jump-root:hover #jump-panel {
+/* Panel visibility is driven by .is-open on #jump-root (set from JS).
+   No hover rule — that fought the explicit close on desktop. */
+#jump-panel {
+  display: none;
+}
+
+#jump-root.is-open #jump-panel {
   display: block;
 }
+
+/* GW1 squad layout — Årets visjonær. */
+.squad-cell {
+  white-space: normal;
+  padding: 6px 10px;
+  min-width: 360px;
+}
+
+.squad {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.squad-row {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.squad-pos {
+  font-family: "Playfair Display", "Georgia", serif;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #94a3b8;
+  text-align: right;
+  padding-top: 1px;
+}
+
+.squad-bench .squad-pos {
+  color: #64748b;
+  font-style: italic;
+}
+
+.squad-players {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+}
+
+.squad-player {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 2px;
+  white-space: nowrap;
+  color: #e2e8f0;
+}
+
+.squad-bench .squad-player {
+  color: #94a3b8;
+}
+
+.squad-cap {
+  color: #f5c054;
+  font-weight: 600;
+  font-size: 10px;
+  margin-left: 2px;
+}
+
+.squad-points {
+  color: #64748b;
+  font-variant-numeric: tabular-nums;
+  font-size: 11px;
+}
+
+.winner .squad-player {
+  color: #f8fafc;
+}
+
+/* Team-name cell: place chip + name + pill badges. */
+.team-cell-td {
+  white-space: normal;
+}
+
+.team-cell {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.place-chip {
+  display: inline-block;
+  background: #1c2030;
+  color: #f5c054;
+  border: 1px solid #2b3140;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  padding: 1px 7px;
+  letter-spacing: 0.04em;
+}
+
+.winner .place-chip {
+  background: rgba(245, 192, 84, 0.16);
+  color: #ffe9b3;
+  border-color: rgba(245, 192, 84, 0.5);
+}
+
+.team-name {
+  color: #e2e8f0;
+}
+
+.pill {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 1px 7px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+}
+
+.pill-youtube {
+  background: rgba(239, 68, 68, 0.14);
+  color: #fca5a5;
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+.pill-ai {
+  background: rgba(139, 92, 246, 0.14);
+  color: #c4b5fd;
+  border-color: rgba(139, 92, 246, 0.35);
+}
+
+/* Paired "value @ GW N" cells (best/worst points, best/worst rank etc.). */
+.gw-paired {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  justify-content: flex-end;
+}
+
+.gw-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-variant-numeric: tabular-nums;
+  color: #94a3b8;
+  background: rgba(148, 163, 184, 0.1);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 999px;
+  padding: 0 6px;
+  letter-spacing: 0.04em;
+}
+
+.winner .gw-badge {
+  color: #f5c054;
+  background: rgba(245, 192, 84, 0.1);
+  border-color: rgba(245, 192, 84, 0.3);
+}
+
 

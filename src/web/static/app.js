@@ -11,7 +11,12 @@ const state = {
   seasons: [],
   season: null,
   leagueId: null,
+  teamTags: {},
+  siblingGwKeys: {},
 };
+
+const TEAM_NAME_KEYS = new Set(["name", "user_name", "team_name"]);
+const PILL_CLASS = { YouTube: "pill-youtube", AI: "pill-ai" };
 
 function el(tag, props = {}, children = []) {
   const node = document.createElement(tag);
@@ -53,6 +58,51 @@ function isNumericKey(rows, key) {
     return typeof v === "number";
   }
   return false;
+}
+
+function teamTagFor(row) {
+  const uid = row?.user_id || row?.id;
+  if (!uid) return null;
+  return state.teamTags[uid] || null;
+}
+
+function renderTeamCell(name, tag) {
+  const wrap = el("div", { class: "team-cell" });
+  if (tag?.place) {
+    wrap.appendChild(el("span", { class: "place-chip" }, `P${tag.place}`));
+  }
+  wrap.appendChild(el("span", { class: "team-name" }, name == null ? "" : String(name)));
+  if (tag?.pills?.length) {
+    for (const p of tag.pills) {
+      wrap.appendChild(el("span", { class: `pill ${PILL_CLASS[p] || ""}` }, p));
+    }
+  }
+  return wrap;
+}
+
+function renderSquad(squad) {
+  const wrap = el("div", { class: "squad" });
+  if (!Array.isArray(squad) || squad.length === 0) {
+    wrap.appendChild(el("span", { class: "text-slate-500 italic text-xs" }, "—"));
+    return wrap;
+  }
+  for (const group of squad) {
+    const row = el("div", { class: `squad-row squad-${group.pos.toLowerCase()}` });
+    row.appendChild(el("span", { class: "squad-pos" }, group.pos));
+    const list = el("span", { class: "squad-players" });
+    for (const p of group.players) {
+      const tag = el("span", { class: "squad-player" });
+      tag.appendChild(el("span", { class: "squad-name" }, p.name));
+      if (p.captain) {
+        tag.appendChild(el("span", { class: "squad-cap" }, p.captain));
+      }
+      tag.appendChild(el("span", { class: "squad-points" }, ` ${p.points}`));
+      list.appendChild(tag);
+    }
+    row.appendChild(list);
+    wrap.appendChild(row);
+  }
+  return wrap;
 }
 
 function slugFor(section) {
@@ -97,6 +147,28 @@ function renderSection(section) {
     const tr = el("tr", { class: i === 0 ? "winner" : "" });
     for (const col of section.columns) {
       const val = row[col.key];
+      if (col.key === "squad") {
+        const td = el("td", { class: "squad-cell" });
+        td.appendChild(renderSquad(val));
+        tr.appendChild(td);
+        continue;
+      }
+      if (TEAM_NAME_KEYS.has(col.key)) {
+        const td = el("td", { class: "team-cell-td" });
+        td.appendChild(renderTeamCell(val, teamTagFor(row)));
+        tr.appendChild(td);
+        continue;
+      }
+      const gwKey = state.siblingGwKeys[col.key];
+      const gwVal = gwKey ? row[gwKey] : null;
+      if (gwVal != null) {
+        const numeric = typeof val === "number";
+        const td = el("td", { class: numeric ? "num gw-paired" : "gw-paired" });
+        td.appendChild(el("span", {}, formatCell(val)));
+        td.appendChild(el("span", { class: "gw-badge" }, `GW${gwVal}`));
+        tr.appendChild(td);
+        continue;
+      }
       const numeric = typeof val === "number";
       const isLong = typeof val === "string" && val.length > 40;
       tr.appendChild(
@@ -124,6 +196,8 @@ async function loadStats() {
       throw new Error(`${res.status}: ${text.slice(0, 200)}`);
     }
     const data = await res.json();
+    state.teamTags = data.meta.team_tags || {};
+    state.siblingGwKeys = data.meta.sibling_gw_keys || {};
     $("#meta").textContent =
       `${data.meta.league_name} · ${data.meta.season} · GW ${data.meta.latest_gameweek}` +
       (data.meta.latest_gameweek_finished ? " (ferdig)" : " (pågående)");
@@ -142,6 +216,13 @@ async function loadStats() {
   }
 }
 
+function setJumpOpen(open) {
+  const root = $("#jump-root");
+  const toggle = $("#jump-toggle");
+  root.classList.toggle("is-open", open);
+  toggle.setAttribute("aria-expanded", String(open));
+}
+
 function renderTOC(sections) {
   const tocList = $("#toc-list");
   const jumpList = $("#jump-list");
@@ -154,7 +235,7 @@ function renderTOC(sections) {
       const target = document.getElementById(slug);
       if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
       history.replaceState(null, "", `#${slug}`);
-      $("#jump-panel").classList.add("hidden");
+      setJumpOpen(false);
     };
     tocList.appendChild(
       el("li", {}, [el("a", { href: `#${slug}`, onclick: onJump }, section.title)])
@@ -166,20 +247,38 @@ function renderTOC(sections) {
   $("#toc").classList.remove("hidden");
   $("#jump-root").classList.remove("hidden");
 
-  // Click-toggle (in addition to hover) so it works on touch devices.
-  const toggle = $("#jump-toggle");
-  const panel = $("#jump-panel");
-  toggle.onclick = () => {
-    const open = !panel.classList.contains("hidden");
-    panel.classList.toggle("hidden", open);
-    toggle.setAttribute("aria-expanded", String(!open));
-  };
-
   // If the URL had a hash on load, jump there now that sections exist.
   if (location.hash) {
     const target = document.getElementById(location.hash.slice(1));
     if (target) target.scrollIntoView({ behavior: "instant", block: "start" });
   }
+}
+
+function wireJumpMenu() {
+  const root = $("#jump-root");
+  const toggle = $("#jump-toggle");
+  const closeBtn = $("#jump-close");
+
+  toggle.addEventListener("click", (e) => {
+    e.stopPropagation();
+    setJumpOpen(!root.classList.contains("is-open"));
+  });
+
+  closeBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    setJumpOpen(false);
+  });
+
+  // Click anywhere outside the jump root → close.
+  document.addEventListener("click", (e) => {
+    if (!root.classList.contains("is-open")) return;
+    if (!root.contains(e.target)) setJumpOpen(false);
+  });
+
+  // Escape → close.
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") setJumpOpen(false);
+  });
 }
 
 function populateLeaguePicker() {
@@ -224,6 +323,7 @@ async function init() {
     loadStats();
   });
 
+  wireJumpMenu();
   await loadStats();
 }
 
