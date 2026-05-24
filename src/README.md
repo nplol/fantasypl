@@ -37,28 +37,25 @@ pip install -r requirements.txt
 
 ## Headless auth (optional)
 
-If you want to refresh FPL auth tokens without manually copy-pasting cookies from a browser, see [`docs/HEADLESS-AUTH.md`](../docs/HEADLESS-AUTH.md) for one-time setup. The token isn't wired into `fetch_league.py` yet — the section below is what you actually need to run today.
+`fetch_league.py` hits the FPL public API directly and works without any credentials for past/finished gameweeks. You only need auth for the in-flight gameweek before it locks. See [`docs/HEADLESS-AUTH.md`](../docs/HEADLESS-AUTH.md) for the one-time Playwright + `~/.fpl/credentials.env` setup if/when you need `--fetch-live`.
 
 ## Fetch league data
 
-Before analyzing, you need to fetch data. To fetch data for the current season up to the latest gameweek for your league, run:
+Before analyzing, you need to fetch data. To fetch data for your league up to the latest finished gameweek, run:
 
 ```
-python fpl-stats/scripts/fetch_league.py \
+python scripts/fetch_league.py \
     --league=<fpl_league_id> \
-    --email=<fpl_username> \
-    --cookie=<fpl_cookie> \
-    [--password=<fpl_password>] \
     [--force-fetch-all] \
     [--fetch-live] \
-    [> <output_file>]
+    [--auth]
 ```
 
-The cookie should be extracted from the browser after logging in to the FPL website (copy/paste the `document.cookie` value from the dev tool console after logging in) which should increase the success chance of authenticating.
+No email/cookie needed — past gameweeks are public.
 
-The password could either be provided as an argument, or it will be prompted.  
-If you want to fetch everything regardless of what data you already have, add the `--force-fetch-all` argument flag.  
-If you want to fetch "live" data for an ongoing/current, gameweek, add the `--fetch-live` argument flag.
+- `--force-fetch-all` ignores the cache and re-fetches every user and player.
+- `--fetch-live` includes the current (still unlocked) gameweek. Requires a token from `python scripts/refresh_token.py` first.
+- `--auth` attaches a fresh token even for past data. Rarely needed.
 
 This will fetch data from `fantasy.premierleague.com` and output the following files:
 

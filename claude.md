@@ -41,7 +41,7 @@ python scripts/refresh_token.py                                       # headless
 
 Programmatic use: `from fplstats.fpl_auth import get_valid_token`.
 
-NOTE: `scripts/fetch_league.py` does NOT use this token yet — it still goes through the legacy `fpl` library's cookie auth. Migrating the fetcher to `get_valid_token()` is a future change.
+`scripts/fetch_league.py` hits the FPL public API directly via `fplstats.fpl_api` and works without a token for all cached/past data. Pass `--auth` (or `--fetch-live`) to attach a fresh token from `fpl_auth` — only needed for the in-flight gameweek before it locks.
 
 ## Code Style
 
@@ -104,8 +104,8 @@ finished = [gw for gw in self.gameweeks if gw.finished]
 
 ## Development Workflow
 
-1. **Fetch data**: `python scripts/fetch_league.py --league=1026627 --email=... --cookie=...`
-2. **Analyze**: `python scripts/analyze_league.py --season=2024_2025 --league=1026627`
+1. **Fetch data**: `python scripts/fetch_league.py --league=491678` (no creds needed for past GWs; add `--fetch-live` for the in-flight one)
+2. **Analyze**: `python scripts/analyze_league.py --season=2025_2026 --league=491678`
 3. **Output** goes to `statistics/` directory
 
 ## Commits
