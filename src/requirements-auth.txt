@@ -1,0 +1,8 @@
+# Optional auth deps for fplstats/fpl_auth.py headless login.
+# Not part of the default install — adds ~300 MB once chromium is downloaded.
+#
+# Install after `pip install -r requirements.txt`:
+#     pip install -r requirements-auth.txt
+#     playwright install chromium
+
+playwright>=1.40,<2

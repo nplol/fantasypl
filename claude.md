@@ -11,6 +11,7 @@ All documentation lives in `docs/`:
 | [ARCHITECTURE.md](docs/ARCHITECTURE.md) | System design, data flow, software architecture |
 | [PROCEDURES.md](docs/PROCEDURES.md) | Operating workflows, CLI commands, dev setup |
 | [STATISTICS-REFERENCE.md](docs/STATISTICS-REFERENCE.md) | All 35+ statistics categories with code |
+| [HEADLESS-AUTH.md](docs/HEADLESS-AUTH.md) | One-time setup for the headless FPL token refresh (Playwright) |
 
 ## Project Structure
 
@@ -19,10 +20,28 @@ src/fplstats/          # Core Python package
   analyzers.py         # LeagueAnalyzer (40+ methods, main logic)
   models.py            # Pydantic data models
   enums.py             # Chip, Position enums
+  fpl_auth.py          # Headless OAuth2 PKCE login via Playwright
 src/scripts/           # CLI entry points
   fetch_league.py      # FPL API data fetcher
   analyze_league.py    # Statistics generator
+  refresh_token.py     # Headless FPL token refresh
 ```
+
+## Headless FPL auth
+
+`src/fplstats/fpl_auth.py` drives Chromium through FPL's OAuth2 PKCE flow and captures the `X-Api-Authorization` JWT off the SPA's first authenticated `/api/` call. Python port of `fpl-ai-assist/fpl-mcp-server/scripts/refresh-token.ts` — same client_id, same `~/.fpl/credentials.env` + `~/.fpl/secrets.env` layout, so credentials are interchangeable across projects.
+
+Full setup guide for a fresh machine: [docs/HEADLESS-AUTH.md](docs/HEADLESS-AUTH.md).
+
+```bash
+pip install -r requirements-auth.txt && playwright install chromium  # one-time
+python scripts/refresh_token.py --save-credentials                    # first run
+python scripts/refresh_token.py                                       # headless refresh
+```
+
+Programmatic use: `from fplstats.fpl_auth import get_valid_token`.
+
+NOTE: `scripts/fetch_league.py` does NOT use this token yet — it still goes through the legacy `fpl` library's cookie auth. Migrating the fetcher to `get_valid_token()` is a future change.
 
 ## Code Style
 

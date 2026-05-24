@@ -9,6 +9,7 @@
 | [ARCHITECTURE.md](./ARCHITECTURE.md) | System architecture, data flow diagrams, software design, and component overview |
 | [PROCEDURES.md](./PROCEDURES.md) | Step-by-step operating procedures, CLI reference, and development setup |
 | [STATISTICS-REFERENCE.md](./STATISTICS-REFERENCE.md) | Complete reference guide for all 35+ statistical categories with code implementations |
+| [HEADLESS-AUTH.md](./HEADLESS-AUTH.md) | Setup guide for the headless OAuth2 PKCE login (Playwright). One-time setup for refreshing FPL API tokens without manual cookie copy-paste |
 
 ## Quick Links
 

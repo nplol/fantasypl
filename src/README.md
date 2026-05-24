@@ -35,6 +35,10 @@ Install requirements
 pip install -r requirements.txt
 ```
 
+## Headless auth (optional)
+
+If you want to refresh FPL auth tokens without manually copy-pasting cookies from a browser, see [`docs/HEADLESS-AUTH.md`](../docs/HEADLESS-AUTH.md) for one-time setup. The token isn't wired into `fetch_league.py` yet — the section below is what you actually need to run today.
+
 ## Fetch league data
 
 Before analyzing, you need to fetch data. To fetch data for the current season up to the latest gameweek for your league, run:
