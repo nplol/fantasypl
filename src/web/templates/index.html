@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="no" class="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NPLOL Statistikk</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            ink: '#0b0d12',
+            inkSoft: '#11141b',
+            inkSofter: '#171a23',
+            edge: '#222633',
+            gold: '#f5c054',
+            goldSoft: '#7b5f29',
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-ink text-slate-200 antialiased min-h-screen">
+  <header class="border-b border-edge bg-inkSoft sticky top-0 z-30 backdrop-blur">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex flex-wrap items-center gap-4">
+      <div class="flex flex-col">
+        <h1 class="font-serif text-2xl tracking-wide">
+          <span class="text-gold">NPLOL</span> Statistikk
+        </h1>
+        <p id="meta" class="text-xs text-slate-400 mt-0.5">Laster ...</p>
+      </div>
+      <div class="ml-auto flex flex-wrap items-center gap-3">
+        <label class="flex items-center gap-2 text-sm">
+          <span class="text-slate-400">Sesong</span>
+          <select id="season-picker" class="bg-inkSofter border border-edge rounded px-2 py-1 text-sm focus:outline-none focus:border-gold"></select>
+        </label>
+        <label class="flex items-center gap-2 text-sm">
+          <span class="text-slate-400">Liga</span>
+          <select id="league-picker" class="bg-inkSofter border border-edge rounded px-2 py-1 text-sm focus:outline-none focus:border-gold"></select>
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-6 py-8">
+    <div id="loading" class="text-slate-400 text-sm py-12 text-center">Laster statistikk ...</div>
+    <div id="error" class="hidden text-red-400 text-sm py-12 text-center"></div>
+
+    <nav id="toc" class="hidden mb-8 p-4 border border-edge rounded-xl bg-inkSoft">
+      <div class="text-xs uppercase tracking-widest text-slate-400 mb-3">Innhold</div>
+      <ol id="toc-list" class="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-1 list-decimal pl-5 text-sm"></ol>
+    </nav>
+
+    <div id="sections" class="grid grid-cols-1 md:grid-cols-2 gap-5"></div>
+  </main>
+
+  <!-- Floating quick-jump menu, anchored bottom-right -->
+  <div id="jump-root" class="hidden fixed bottom-6 right-6 z-40">
+    <button id="jump-toggle" type="button" aria-expanded="false" aria-controls="jump-panel"
+            class="w-12 h-12 rounded-full bg-gold text-ink shadow-lg flex items-center justify-center font-bold hover:scale-105 transition">
+      ☰
+    </button>
+    <div id="jump-panel" class="hidden absolute bottom-14 right-0 w-72 max-h-[70vh] overflow-y-auto bg-inkSoft border border-edge rounded-lg shadow-xl py-2">
+      <div class="px-3 py-1 text-xs uppercase tracking-widest text-slate-400 border-b border-edge mb-2">Hopp til</div>
+      <ul id="jump-list" class="text-sm"></ul>
+    </div>
+  </div>
+
+  <footer class="border-t border-edge text-xs text-slate-500 py-6 mt-12">
+    <div class="max-w-6xl mx-auto px-6 flex justify-between">
+      <span>nplol &middot; lokal statistikkserver</span>
+      <span id="footer-counts"></span>
+    </div>
+  </footer>
+
+  <script>window.__BASE = {{ request.script_root | tojson }};</script>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
