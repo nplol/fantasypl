@@ -10,6 +10,7 @@
 | [PROCEDURES.md](./PROCEDURES.md) | Step-by-step operating procedures, CLI reference, and development setup |
 | [STATISTICS-REFERENCE.md](./STATISTICS-REFERENCE.md) | Complete reference guide for all 35+ statistical categories with code implementations |
 | [HEADLESS-AUTH.md](./HEADLESS-AUTH.md) | Setup guide for the headless OAuth2 PKCE login (Playwright). One-time setup for refreshing FPL API tokens without manual cookie copy-paste |
+| [DASHBOARD.md](./DASHBOARD.md) | Local Flask stats dashboard — architecture, row augmentations, caching, and how to add new stats |
 
 ## Quick Links
 

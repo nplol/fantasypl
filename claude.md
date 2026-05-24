@@ -12,6 +12,7 @@ All documentation lives in `docs/`:
 | [PROCEDURES.md](docs/PROCEDURES.md) | Operating workflows, CLI commands, dev setup |
 | [STATISTICS-REFERENCE.md](docs/STATISTICS-REFERENCE.md) | All 35+ statistics categories with code |
 | [HEADLESS-AUTH.md](docs/HEADLESS-AUTH.md) | One-time setup for the headless FPL token refresh (Playwright) |
+| [DASHBOARD.md](docs/DASHBOARD.md) | Local Flask stats dashboard — architecture, augmentations, how to add a stat |
 
 ## Project Structure
 
@@ -23,9 +24,27 @@ src/fplstats/          # Core Python package
   fpl_auth.py          # Headless OAuth2 PKCE login via Playwright
 src/scripts/           # CLI entry points
   fetch_league.py      # FPL API data fetcher
-  analyze_league.py    # Statistics generator
+  analyze_league.py    # Statistics generator (terminal)
   refresh_token.py     # Headless FPL token refresh
+src/web/               # Local Flask dashboard (same stats, browser UI)
+  app.py               # Flask app, JSON API, row augmentations, caching
+  templates/index.html # Single-page dashboard
+  static/{app,style}.* # Vanilla JS + CSS (no build step)
+bin/dev                # One-liner: launch dashboard on localhost:5000
 ```
+
+## Stats dashboard
+
+`bin/dev` boots a Flask app at <http://localhost:5000> that renders
+every analyzer stat as a card. Same data the CLI prints, plus place
+chips, team pills, GW context badges, and a quick-jump menu. Reads
+straight from `src/data/`, so any season you've fetched is browsable.
+Cache auto-invalidates on file mtime, so re-fetching data + refreshing
+the browser is enough — no restart.
+
+Putting it behind a reverse proxy under a path prefix is supported via
+`X-Forwarded-Prefix` header + Werkzeug ProxyFix. The proxy itself is
+out of scope for this repo. See [docs/DASHBOARD.md](docs/DASHBOARD.md).
 
 ## Headless FPL auth
 

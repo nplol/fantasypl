@@ -1,20 +1,14 @@
 #!/usr/bin/env bash
-# Launch the local stats dashboard Flask app on :5000.
+# Launch the local stats dashboard Flask app on http://localhost:5000.
 #
-# Reverse-proxy is handled by the system Caddy in `it-management`
-# (configs/caddy/demo.Caddyfile, listening on :9999). With that running, the
-# dashboard is reachable at:
-#
-#   - http://localhost:5000        (direct, no path prefix)
-#   - http://localhost:9999/nplol/ (via Caddy on this Mac)
-#   - https://localwork.vongohren.me/nplol/  (via Cloudflare tunnel + Caddy)
-#
-# Caddy status:    brew services list | grep caddy
-# Reload Caddy:    caddy reload --config /opt/homebrew/etc/Caddyfile
+# This script only handles the Flask process. If you want the dashboard
+# behind a reverse proxy under a path prefix, that's outside this repo —
+# the proxy just needs to forward `X-Forwarded-Prefix: <prefix>` and
+# Flask's ProxyFix handles the rest. See docs/DASHBOARD.md.
 #
 # Requirements:
-#   - src/env virtualenv with flask installed:
-#       cd src && source env/bin/activate && pip install -r requirements-web.txt
+#   src/env virtualenv with flask installed:
+#     cd src && source env/bin/activate && pip install -r requirements-web.txt
 
 set -euo pipefail
 
@@ -27,8 +21,6 @@ if [ ! -x "$VENV_PY" ]; then
   exit 1
 fi
 
-echo "[dev] starting Flask on :5000"
-echo "[dev] direct: http://localhost:5000"
-echo "[dev] caddy:  http://localhost:9999/nplol/  (system Caddy from it-management)"
+echo "[dev] http://localhost:5000"
 cd "$SRC_DIR"
 exec "$VENV_PY" -m web.app

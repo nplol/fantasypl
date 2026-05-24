@@ -98,3 +98,23 @@ Soccer MC's   1413
 CHANGE NAME   1337
 >>> # Etc.
 ```
+
+## Web dashboard
+
+Browser UI for the same stats. Single page, dark mode, jump-to-stat
+menu, position-sorted GW1 squads, place + pill badges per manager,
+"value @ GW" pairing for the GW-comparison stats.
+
+```bash
+cd src && source env/bin/activate
+pip install -r requirements-web.txt   # one-time
+cd ..
+bin/dev
+```
+
+Open <http://localhost:5000>. Reads from `data/`, picks up any season
+you've fetched automatically. Re-run `fetch_league.py` and refresh the
+browser — the cache auto-invalidates on file mtime, no restart needed.
+
+Full architecture, the row augmentations, and how to add a new stat:
+[`../docs/DASHBOARD.md`](../docs/DASHBOARD.md).

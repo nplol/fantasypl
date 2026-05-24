@@ -1,11 +1,16 @@
 """
 Local Flask app that serves a dashboard of LeagueAnalyzer statistics.
 
-Run directly:
+Run:
     cd src && source env/bin/activate
     python -m web.app                       # or `flask --app web.app run -p 5000`
 
-Caddy reverse-proxies localhost:8080 -> localhost:5000 (see Caddyfile).
+Then open http://localhost:5000.
+
+If you want to expose the dashboard under a path prefix behind a reverse
+proxy (e.g. /nplol/), have the proxy send `X-Forwarded-Prefix: /nplol` —
+ProxyFix below reads that into SCRIPT_NAME and url_for emits the right
+URLs. Header is absent on direct hits, so localhost:5000 just works.
 
 Endpoints:
     GET /                                 → dashboard HTML
@@ -609,10 +614,10 @@ def _discover_seasons() -> List[Dict[str, Any]]:
 
 
 app = Flask(__name__)
-# Behind the it-management Caddy on :9999, this app is served under /nplol/
-# via `handle_path /nplol/* { reverse_proxy ... }` + `X-Forwarded-Prefix: /nplol`.
-# ProxyFix reads that header into SCRIPT_NAME so url_for emits /nplol/static/...
-# automatically. No-op when hit directly on :5000 (header absent).
+# Make Flask cooperate with an upstream reverse proxy: ProxyFix reads
+# X-Forwarded-Prefix into SCRIPT_NAME so url_for emits the right path
+# (`/nplol/static/...` instead of `/static/...`) when mounted under a prefix.
+# No-op when the header is absent — direct hits on :5000 still work.
 app.wsgi_app = ProxyFix(app.wsgi_app, x_for=1, x_proto=1, x_host=1, x_prefix=1)
 
 
