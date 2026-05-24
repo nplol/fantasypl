@@ -1,0 +1,83 @@
+[
+  {
+    "avg_gw_points": 62.2368421053,
+    "gw_point_range": 61,
+    "highest_gw_points": 95,
+    "lowest_gw_points": 34,
+    "total_points": 2365,
+    "user_id": "3540276",
+    "user_name": "Bare ikke ballene"
+  },
+  {
+    "avg_gw_points": 60.4473684211,
+    "gw_point_range": 78,
+    "highest_gw_points": 105,
+    "lowest_gw_points": 27,
+    "total_points": 2297,
+    "user_id": "4917255",
+    "user_name": "Team TH"
+  },
+  {
+    "avg_gw_points": 65.0789473684,
+    "gw_point_range": 80,
+    "highest_gw_points": 115,
+    "lowest_gw_points": 35,
+    "total_points": 2473,
+    "user_id": "3026513",
+    "user_name": "A-laget"
+  },
+  {
+    "avg_gw_points": 60.8421052632,
+    "gw_point_range": 80,
+    "highest_gw_points": 110,
+    "lowest_gw_points": 30,
+    "total_points": 2312,
+    "user_id": "1431159",
+    "user_name": "Snakes on a Kane"
+  },
+  {
+    "avg_gw_points": 65.2631578947,
+    "gw_point_range": 82,
+    "highest_gw_points": 116,
+    "lowest_gw_points": 34,
+    "total_points": 2480,
+    "user_id": "2449562",
+    "user_name": "Soccer MC\u2019s"
+  },
+  {
+    "avg_gw_points": 61.9210526316,
+    "gw_point_range": 93,
+    "highest_gw_points": 118,
+    "lowest_gw_points": 25,
+    "total_points": 2353,
+    "user_id": "2237319",
+    "user_name": "La kula gj\u00f8re jobben"
+  },
+  {
+    "avg_gw_points": 66.3684210526,
+    "gw_point_range": 98,
+    "highest_gw_points": 128,
+    "lowest_gw_points": 30,
+    "total_points": 2522,
+    "user_id": "4659762",
+    "user_name": "Red lightning"
+  },
+  {
+    "avg_gw_points": 66.3421052632,
+    "gw_point_range": 106,
+    "highest_gw_points": 125,
+    "lowest_gw_points": 19,
+    "total_points": 2521,
+    "user_id": "6004739",
+    "user_name": "PC Bears"
+  },
+  {
+    "avg_gw_points": 61.7894736842,
+    "gw_point_range": 117,
+    "highest_gw_points": 140,
+    "lowest_gw_points": 23,
+    "total_points": 2348,
+    "user_id": "7597953",
+    "user_name": "Overtenningsklubben"
+  }
+]

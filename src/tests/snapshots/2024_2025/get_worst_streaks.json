@@ -1,0 +1,82 @@
+[
+  {
+    "avg": 41.0,
+    "from_gameweek": 6,
+    "id": "4770461",
+    "name": "Scotty knows",
+    "to_gameweek": 10,
+    "total": 205
+  },
+  {
+    "avg": 42.2,
+    "from_gameweek": 6,
+    "id": "3620812",
+    "name": "PC Bears",
+    "to_gameweek": 10,
+    "total": 211
+  },
+  {
+    "avg": 43.2,
+    "from_gameweek": 34,
+    "id": "1376541",
+    "name": "La kula gj\u00f8re jobben",
+    "to_gameweek": 38,
+    "total": 216
+  },
+  {
+    "avg": 43.2,
+    "from_gameweek": 8,
+    "id": "3284860",
+    "name": "team sisteplass",
+    "to_gameweek": 12,
+    "total": 216
+  },
+  {
+    "avg": 43.8,
+    "from_gameweek": 6,
+    "id": "4656616",
+    "name": "Team TH",
+    "to_gameweek": 10,
+    "total": 219
+  },
+  {
+    "avg": 45.0,
+    "from_gameweek": 8,
+    "id": "3990812",
+    "name": "Redlightning",
+    "to_gameweek": 12,
+    "total": 225
+  },
+  {
+    "avg": 45.2,
+    "from_gameweek": 6,
+    "id": "1914325",
+    "name": "A-laget",
+    "to_gameweek": 10,
+    "total": 226
+  },
+  {
+    "avg": 46.6,
+    "from_gameweek": 7,
+    "id": "5252912",
+    "name": "Soccer MC\u2019s",
+    "to_gameweek": 11,
+    "total": 233
+  },
+  {
+    "avg": 46.6,
+    "from_gameweek": 10,
+    "id": "3658433",
+    "name": "Low Rank Legends",
+    "to_gameweek": 14,
+    "total": 233
+  },
+  {
+    "avg": 48.8,
+    "from_gameweek": 7,
+    "id": "8539016",
+    "name": "Overtenningsklubben",
+    "to_gameweek": 11,
+    "total": 244
+  }
+]

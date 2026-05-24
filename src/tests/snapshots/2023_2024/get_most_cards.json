@@ -1,0 +1,82 @@
+[
+  {
+    "id": "3219072",
+    "name": "PC Bears",
+    "total_card_points": -73,
+    "total_cards": 65,
+    "total_red_cards": 4,
+    "total_yellow_cards": 61
+  },
+  {
+    "id": "3305436",
+    "name": "Snakes on a Kane",
+    "total_card_points": -64,
+    "total_cards": 62,
+    "total_red_cards": 1,
+    "total_yellow_cards": 61
+  },
+  {
+    "id": "4625168",
+    "name": "Overtenningsklubben",
+    "total_card_points": -64,
+    "total_cards": 60,
+    "total_red_cards": 2,
+    "total_yellow_cards": 58
+  },
+  {
+    "id": "4442021",
+    "name": "Team midten",
+    "total_card_points": -64,
+    "total_cards": 62,
+    "total_red_cards": 1,
+    "total_yellow_cards": 61
+  },
+  {
+    "id": "6092678",
+    "name": "team sisteplass",
+    "total_card_points": -63,
+    "total_cards": 61,
+    "total_red_cards": 1,
+    "total_yellow_cards": 60
+  },
+  {
+    "id": "3465030",
+    "name": "La kula gj\u00f8re jobben",
+    "total_card_points": -63,
+    "total_cards": 59,
+    "total_red_cards": 2,
+    "total_yellow_cards": 57
+  },
+  {
+    "id": "3384168",
+    "name": "A-laget",
+    "total_card_points": -57,
+    "total_cards": 53,
+    "total_red_cards": 2,
+    "total_yellow_cards": 51
+  },
+  {
+    "id": "2627958",
+    "name": "Red lightning",
+    "total_card_points": -56,
+    "total_cards": 56,
+    "total_red_cards": 0,
+    "total_yellow_cards": 56
+  },
+  {
+    "id": "3913034",
+    "name": "Team TH",
+    "total_card_points": -54,
+    "total_cards": 52,
+    "total_red_cards": 1,
+    "total_yellow_cards": 51
+  },
+  {
+    "id": "2593250",
+    "name": "Soccer MC\u2019s",
+    "total_card_points": -50,
+    "total_cards": 50,
+    "total_red_cards": 0,
+    "total_yellow_cards": 50
+  }
+]

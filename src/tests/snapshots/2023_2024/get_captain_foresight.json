@@ -1,0 +1,82 @@
+[
+  {
+    "id": "3913034",
+    "name": "Team TH",
+    "total_captain_points": 622,
+    "total_gameweeks_with_vc": 1,
+    "total_gameweeks_without_captain": 0,
+    "total_vc_points": 20
+  },
+  {
+    "id": "6092678",
+    "name": "team sisteplass",
+    "total_captain_points": 612,
+    "total_gameweeks_with_vc": 1,
+    "total_gameweeks_without_captain": 1,
+    "total_vc_points": 26
+  },
+  {
+    "id": "2627958",
+    "name": "Red lightning",
+    "total_captain_points": 604,
+    "total_gameweeks_with_vc": 1,
+    "total_gameweeks_without_captain": 0,
+    "total_vc_points": 26
+  },
+  {
+    "id": "2593250",
+    "name": "Soccer MC\u2019s",
+    "total_captain_points": 600,
+    "total_gameweeks_with_vc": 1,
+    "total_gameweeks_without_captain": 0,
+    "total_vc_points": 26
+  },
+  {
+    "id": "3219072",
+    "name": "PC Bears",
+    "total_captain_points": 588,
+    "total_gameweeks_with_vc": 1,
+    "total_gameweeks_without_captain": 0,
+    "total_vc_points": 4
+  },
+  {
+    "id": "4442021",
+    "name": "Team midten",
+    "total_captain_points": 570,
+    "total_gameweeks_with_vc": 1,
+    "total_gameweeks_without_captain": 0,
+    "total_vc_points": 4
+  },
+  {
+    "id": "3305436",
+    "name": "Snakes on a Kane",
+    "total_captain_points": 562,
+    "total_gameweeks_with_vc": 3,
+    "total_gameweeks_without_captain": 0,
+    "total_vc_points": 30
+  },
+  {
+    "id": "3384168",
+    "name": "A-laget",
+    "total_captain_points": 556,
+    "total_gameweeks_with_vc": 2,
+    "total_gameweeks_without_captain": 0,
+    "total_vc_points": 26
+  },
+  {
+    "id": "3465030",
+    "name": "La kula gj\u00f8re jobben",
+    "total_captain_points": 556,
+    "total_gameweeks_with_vc": 1,
+    "total_gameweeks_without_captain": 0,
+    "total_vc_points": 4
+  },
+  {
+    "id": "4625168",
+    "name": "Overtenningsklubben",
+    "total_captain_points": 502,
+    "total_gameweeks_with_vc": 2,
+    "total_gameweeks_without_captain": 0,
+    "total_vc_points": 26
+  }
+]

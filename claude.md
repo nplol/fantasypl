@@ -43,7 +43,24 @@ black .           # Format
 isort .           # Sort imports
 flake8 .          # Lint
 mypy .            # Type check (uses mypy.ini with pydantic plugin)
+pytest            # Run snapshot regression tests (~25s, 191 checks)
 ```
+
+## Tests — snapshot regression bench
+
+Lives in `src/tests/`. Auto-runs every public `get_*` method on `LeagueAnalyzer` against all 5 cached seasons and diffs against `tests/snapshots/{season}/{method}.json`.
+
+```bash
+pytest                         # verify nothing drifted
+pytest -k 2024_2025            # one season (~2.5s)
+pytest --update-snapshots      # regenerate after an intentional stat change
+git diff tests/snapshots/      # ALWAYS review before committing regenerated snapshots
+```
+
+- New `get_*` methods are picked up automatically — no test wiring needed.
+- Helpers/orchestrators are listed in `EXCLUDED` in `test_stats_snapshots.py`.
+- See `src/tests/README.md` for the full workflow including known quirks (set non-determinism, embedded User bloat in transfer-related methods).
+- Dev deps in `src/requirements-dev.txt` (pytest + deepdiff).
 
 ## Key Patterns
 

@@ -1,0 +1,82 @@
+[
+  {
+    "avg": 35.2,
+    "from_gameweek": 15,
+    "id": "3465030",
+    "name": "La kula gj\u00f8re jobben",
+    "to_gameweek": 19,
+    "total": 176
+  },
+  {
+    "avg": 42.2,
+    "from_gameweek": 15,
+    "id": "3219072",
+    "name": "PC Bears",
+    "to_gameweek": 19,
+    "total": 211
+  },
+  {
+    "avg": 44.6,
+    "from_gameweek": 15,
+    "id": "4442021",
+    "name": "Team midten",
+    "to_gameweek": 19,
+    "total": 223
+  },
+  {
+    "avg": 45.2,
+    "from_gameweek": 15,
+    "id": "4625168",
+    "name": "Overtenningsklubben",
+    "to_gameweek": 19,
+    "total": 226
+  },
+  {
+    "avg": 46.2,
+    "from_gameweek": 15,
+    "id": "2627958",
+    "name": "Red lightning",
+    "to_gameweek": 19,
+    "total": 231
+  },
+  {
+    "avg": 47.0,
+    "from_gameweek": 15,
+    "id": "6092678",
+    "name": "team sisteplass",
+    "to_gameweek": 19,
+    "total": 235
+  },
+  {
+    "avg": 48.8,
+    "from_gameweek": 15,
+    "id": "3305436",
+    "name": "Snakes on a Kane",
+    "to_gameweek": 19,
+    "total": 244
+  },
+  {
+    "avg": 49.0,
+    "from_gameweek": 11,
+    "id": "2593250",
+    "name": "Soccer MC\u2019s",
+    "to_gameweek": 15,
+    "total": 245
+  },
+  {
+    "avg": 49.6,
+    "from_gameweek": 11,
+    "id": "3384168",
+    "name": "A-laget",
+    "to_gameweek": 15,
+    "total": 248
+  },
+  {
+    "avg": 51.8,
+    "from_gameweek": 15,
+    "id": "3913034",
+    "name": "Team TH",
+    "to_gameweek": 19,
+    "total": 259
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "avg_gw_points": 63.7631578947,
+    "gw_point_range": 80,
+    "highest_gw_points": 100,
+    "lowest_gw_points": 20,
+    "total_points": 2423,
+    "user_id": "3913034",
+    "user_name": "Team TH"
+  },
+  {
+    "avg_gw_points": 63.3421052632,
+    "gw_point_range": 98,
+    "highest_gw_points": 114,
+    "lowest_gw_points": 16,
+    "total_points": 2407,
+    "user_id": "4625168",
+    "user_name": "Overtenningsklubben"
+  },
+  {
+    "avg_gw_points": 59.7894736842,
+    "gw_point_range": 99,
+    "highest_gw_points": 118,
+    "lowest_gw_points": 19,
+    "total_points": 2272,
+    "user_id": "4442021",
+    "user_name": "Team midten"
+  },
+  {
+    "avg_gw_points": 65.6315789474,
+    "gw_point_range": 106,
+    "highest_gw_points": 125,
+    "lowest_gw_points": 19,
+    "total_points": 2494,
+    "user_id": "3305436",
+    "user_name": "Snakes on a Kane"
+  },
+  {
+    "avg_gw_points": 66.0263157895,
+    "gw_point_range": 110,
+    "highest_gw_points": 132,
+    "lowest_gw_points": 22,
+    "total_points": 2509,
+    "user_id": "2627958",
+    "user_name": "Red lightning"
+  },
+  {
+    "avg_gw_points": 60.1052631579,
+    "gw_point_range": 110,
+    "highest_gw_points": 138,
+    "lowest_gw_points": 28,
+    "total_points": 2284,
+    "user_id": "3465030",
+    "user_name": "La kula gj\u00f8re jobben"
+  },
+  {
+    "avg_gw_points": 63.7368421053,
+    "gw_point_range": 115,
+    "highest_gw_points": 135,
+    "lowest_gw_points": 20,
+    "total_points": 2422,
+    "user_id": "6092678",
+    "user_name": "team sisteplass"
+  },
+  {
+    "avg_gw_points": 60.9210526316,
+    "gw_point_range": 115,
+    "highest_gw_points": 130,
+    "lowest_gw_points": 15,
+    "total_points": 2315,
+    "user_id": "3219072",
+    "user_name": "PC Bears"
+  },
+  {
+    "avg_gw_points": 68.4473684211,
+    "gw_point_range": 122,
+    "highest_gw_points": 143,
+    "lowest_gw_points": 21,
+    "total_points": 2601,
+    "user_id": "2593250",
+    "user_name": "Soccer MC\u2019s"
+  },
+  {
+    "avg_gw_points": 61.0526315789,
+    "gw_point_range": 130,
+    "highest_gw_points": 153,
+    "lowest_gw_points": 23,
+    "total_points": 2320,
+    "user_id": "3384168",
+    "user_name": "A-laget"
+  }
+]

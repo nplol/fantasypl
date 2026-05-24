@@ -1,0 +1,92 @@
+[
+  {
+    "avg_gw_points": 51.0,
+    "gw_point_range": 56,
+    "highest_gw_points": 84,
+    "lowest_gw_points": 28,
+    "total_points": 1938,
+    "user_id": "4770461",
+    "user_name": "Scotty knows"
+  },
+  {
+    "avg_gw_points": 63.4210526316,
+    "gw_point_range": 75,
+    "highest_gw_points": 103,
+    "lowest_gw_points": 28,
+    "total_points": 2410,
+    "user_id": "1376541",
+    "user_name": "La kula gj\u00f8re jobben"
+  },
+  {
+    "avg_gw_points": 63.7894736842,
+    "gw_point_range": 75,
+    "highest_gw_points": 97,
+    "lowest_gw_points": 22,
+    "total_points": 2424,
+    "user_id": "4656616",
+    "user_name": "Team TH"
+  },
+  {
+    "avg_gw_points": 63.8684210526,
+    "gw_point_range": 76,
+    "highest_gw_points": 114,
+    "lowest_gw_points": 38,
+    "total_points": 2427,
+    "user_id": "1914325",
+    "user_name": "A-laget"
+  },
+  {
+    "avg_gw_points": 57.1052631579,
+    "gw_point_range": 84,
+    "highest_gw_points": 116,
+    "lowest_gw_points": 32,
+    "total_points": 2170,
+    "user_id": "3658433",
+    "user_name": "Low Rank Legends"
+  },
+  {
+    "avg_gw_points": 61.3684210526,
+    "gw_point_range": 85,
+    "highest_gw_points": 113,
+    "lowest_gw_points": 28,
+    "total_points": 2332,
+    "user_id": "8539016",
+    "user_name": "Overtenningsklubben"
+  },
+  {
+    "avg_gw_points": 64.2105263158,
+    "gw_point_range": 90,
+    "highest_gw_points": 114,
+    "lowest_gw_points": 24,
+    "total_points": 2440,
+    "user_id": "3620812",
+    "user_name": "PC Bears"
+  },
+  {
+    "avg_gw_points": 63.4736842105,
+    "gw_point_range": 90,
+    "highest_gw_points": 124,
+    "lowest_gw_points": 34,
+    "total_points": 2412,
+    "user_id": "5252912",
+    "user_name": "Soccer MC\u2019s"
+  },
+  {
+    "avg_gw_points": 58.3421052632,
+    "gw_point_range": 94,
+    "highest_gw_points": 122,
+    "lowest_gw_points": 28,
+    "total_points": 2217,
+    "user_id": "3284860",
+    "user_name": "team sisteplass"
+  },
+  {
+    "avg_gw_points": 63.5526315789,
+    "gw_point_range": 111,
+    "highest_gw_points": 139,
+    "lowest_gw_points": 28,
+    "total_points": 2415,
+    "user_id": "3990812",
+    "user_name": "Redlightning"
+  }
+]

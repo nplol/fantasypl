@@ -1,0 +1,82 @@
+[
+  {
+    "avg": 45.8,
+    "from_gameweek": 30,
+    "id": "3151955",
+    "name": "Team TH",
+    "to_gameweek": 34,
+    "total": 229
+  },
+  {
+    "avg": 46.2,
+    "from_gameweek": 30,
+    "id": "2909483",
+    "name": "Snakes on a Kane",
+    "to_gameweek": 34,
+    "total": 231
+  },
+  {
+    "avg": 48.2,
+    "from_gameweek": 30,
+    "id": "3073684",
+    "name": "Full overtenning",
+    "to_gameweek": 34,
+    "total": 241
+  },
+  {
+    "avg": 48.8,
+    "from_gameweek": 6,
+    "id": "1012126",
+    "name": "CHANGE NAME",
+    "to_gameweek": 10,
+    "total": 244
+  },
+  {
+    "avg": 50.8,
+    "from_gameweek": 18,
+    "id": "895412",
+    "name": "Red lightning",
+    "to_gameweek": 22,
+    "total": 254
+  },
+  {
+    "avg": 51.4,
+    "from_gameweek": 27,
+    "id": "3197137",
+    "name": "Team sisteplass",
+    "to_gameweek": 31,
+    "total": 257
+  },
+  {
+    "avg": 51.6,
+    "from_gameweek": 6,
+    "id": "1802549",
+    "name": "A-laget",
+    "to_gameweek": 10,
+    "total": 258
+  },
+  {
+    "avg": 54.4,
+    "from_gameweek": 12,
+    "id": "3074785",
+    "name": "Hurra for ballene",
+    "to_gameweek": 16,
+    "total": 272
+  },
+  {
+    "avg": 54.8,
+    "from_gameweek": 16,
+    "id": "3078901",
+    "name": "La kula gj\u00f8re jobben",
+    "to_gameweek": 20,
+    "total": 274
+  },
+  {
+    "avg": 57.0,
+    "from_gameweek": 6,
+    "id": "3236448",
+    "name": "Soccer MC\u2019s",
+    "to_gameweek": 10,
+    "total": 285
+  }
+]
