@@ -3,8 +3,8 @@
 | Hva                        | Team                      | num   |
 | :------------------        | :--------                 | ----: |
 | Høyest gw-rank             | Nicolay 	                 | 13 av 11,501,826 (top 0,00000113%) (2024/25) |
-| Flest deltagelser          | Severin 	                 | 16    |
-| Flest ligaseiere           | Severin, Håvard, Øystein  | 3     |
+| Flest deltagelser          | Severin 	                 | 17    |
+| Flest ligaseiere           | Håvard                    | 4     |
 | Flest cupseire             | Torbjørn, Håvard, Andreas | 1     |
 | Høyest total points        | Øystein  	             | 2,601 (2023/24) |
 | Høyest overall rank        | Øystein  	             | 2,011 (GW37, 2023/24) |

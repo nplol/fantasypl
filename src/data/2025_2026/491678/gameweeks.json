@@ -2068,13 +2068,13 @@
     "name": "Gameweek 38",
     "deadline_time": "2026-05-24T13:30:00Z",
     "release_time": null,
-    "average_entry_score": 0,
-    "finished": false,
-    "data_checked": false,
-    "highest_scoring_entry": null,
+    "average_entry_score": 41,
+    "finished": true,
+    "data_checked": true,
+    "highest_scoring_entry": 1457502,
     "deadline_time_epoch": 1779629400,
     "deadline_time_game_offset": 0,
-    "highest_score": null,
+    "highest_score": 117,
     "is_previous": false,
     "is_current": true,
     "is_next": false,
@@ -2083,7 +2083,7 @@
     "can_enter": false,
     "can_manage": false,
     "released": true,
-    "ranked_count": 0,
+    "ranked_count": 12991567,
     "overrides": {
       "rules": {},
       "scoring": {},
@@ -2113,7 +2113,7 @@
     "top_element": 441,
     "top_element_info": {
       "id": 441,
-      "points": 15
+      "points": 18
     },
     "transfers_made": 8603009,
     "most_captained": 430,

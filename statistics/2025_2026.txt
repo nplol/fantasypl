@@ -1,0 +1,750 @@
+2025_2026-statistikk for nplol til og med gameweek 38 (finished)
+
+
+
+ÅRETS VISJONÆRE
+What if-tabell for GW1-picks
++----------------------+--------------+----------+-----------+-----------------+--------------------------------------------------------------------------------------+
+|         Team         | Total points | C points | VC points | Auto-sub points |                                      GW1 picks                                       |
++----------------------+--------------+----------+-----------+-----------------+--------------------------------------------------------------------------------------+
+|       Team TH        |     1951     |   114    |     72    |       188       |                                     Raya (162)                                       |
+|                      |              |          |           |                 |                   Cucurella (104) Gabriel (209) N.Williams (128)                     |
+|                      |              |          |           |                 |                 Mbeumo (148) Saka (157) Palmer(C) (114) Xhaka (124)                  |
+|                      |              |          |           |                 |                    João Pedro (177) Haaland(VC) (239) Piroe (17)                     |
+|                      |              |          |           |                 |                                          -                                           |
+|                      |              |          |           |                 |                     Dúbravka (2) Konsa (97) King (44) Hill (45)                      |
+|                      |              |          |           |                 |                                                                                      |
+|       A-laget        |     1789     |   114    |     54    |        91       |                                    Sánchez (112)                                     |
+|                      |              |          |           |                 |          Tarkowski (170) Van de Ven (116) Milenković (119) Andersen (123)            |
+|                      |              |          |           |                 |               Wirtz (125) Palmer(C) (114) Sarr (117) Gakpo(VC) (131)                 |
+|                      |              |          |           |                 |                             Watkins (167) Haaland (239)                              |
+|                      |              |          |           |                 |                                          -                                           |
+|                      |              |          |           |                 |               Dúbravka (3) Strand Larsen (0) Estève (69) L.Miley (19)                |
+|                      |              |          |           |                 |                                                                                      |
+| Overtenningsklubben  |     1785     |   177    |     0     |       221       |                                    Dúbravka (96)                                     |
+|                      |              |          |           |                 |                    Pedro Porro (117) Van de Ven (116) Aina (67)                      |
+|                      |              |          |           |                 |                Palmer (114) M.Salah (123) Reijnders (92) Gakpo (131)                 |
+|                      |              |          |           |                 |                    João Pedro(C) (177) Watkins (167) Bowen (187)                     |
+|                      |              |          |           |                 |                                          -                                           |
+|                      |              |          |           |                 |           Areola(VC) (0) Wan-Bissaka (66) Dewsbury-Hall (121) Estève (34)            |
+|                      |              |          |           |                 |                                                                                      |
+|     Soccer MC’s      |     1758     |   123    |     31    |        93       |                                    Sánchez (112)                                     |
+|                      |              |          |           |                 |                     Diouf (104) Pedro Porro (117) Murillo (83)                       |
+|                      |              |          |           |                 | B.Fernandes (235) M.Salah(C) (123) Dewsbury-Hall (151) Palmer(VC) (114) Gakpo (131)  |
+|                      |              |          |           |                 |                           Watkins (167) João Pedro (177)                             |
+|                      |              |          |           |                 |                                          -                                           |
+|                      |              |          |           |                 |                Dúbravka (3) Marc Guiu (0) Reinildo (55) Estève (35)                  |
+|                      |              |          |           |                 |                                                                                      |
+|   team sisteplass    |     1749     |   123    |     31    |       146       |                                    Sánchez (112)                                     |
+|                      |              |          |           |                 |                     Diouf (104) Pedro Porro (117) Murillo (83)                       |
+|                      |              |          |           |                 |   Palmer(VC) (114) B.Fernandes (235) M.Salah(C) (123) Reijnders (92) Ndiaye (128)    |
+|                      |              |          |           |                 |                           João Pedro (177) Watkins (167)                             |
+|                      |              |          |           |                 |                                          -                                           |
+|                      |              |          |           |                 |                Dúbravka (3) Richards (104) Estève (39) Marc Guiu (0)                 |
+|                      |              |          |           |                 |                                                                                      |
+|    Red Lightning     |     1677     |   123    |     31    |       136       |                                  Verbruggen (130)                                    |
+|                      |              |          |           |                 |                   Pedro Porro (117) Andersen (123) De Cuyper (84)                    |
+|                      |              |          |           |                 |  M.Salah(C) (123) Reijnders (92) B.Fernandes (235) Georginio (87) Palmer(VC) (114)   |
+|                      |              |          |           |                 |                            Evanilson (115) Watkins (167)                             |
+|                      |              |          |           |                 |                                          -                                           |
+|                      |              |          |           |                 |                  Dúbravka (0) Piroe (0) Gvardiol (73) Estève (63)                    |
+|                      |              |          |           |                 |                                                                                      |
+| Midten er vår plass  |     1645     |   123    |     52    |       102       |                                    Sánchez (112)                                     |
+|                      |              |          |           |                 |                     Van de Ven (116) Wan-Bissaka (67) Aina (67)                      |
+|                      |              |          |           |                 |     M.Salah(C) (123) Palmer (114) Dewsbury-Hall (151) Reijnders (92) Eze (113)       |
+|                      |              |          |           |                 |                         João Pedro (177) Haaland(VC) (239)                           |
+|                      |              |          |           |                 |                                          -                                           |
+|                      |              |          |           |                 |                 Dúbravka (3) Anderson (0) Marc Guiu (0) Rodon (99)                   |
+|                      |              |          |           |                 |                                                                                      |
+|       PC Bears       |     1529     |   123    |     31    |       121       |                                     Sels (105)                                       |
+|                      |              |          |           |                 |                  Pedro Porro (117) Frimpong (63) Van de Ven (116)                    |
+|                      |              |          |           |                 |       Kudus (75) Reijnders (92) Wirtz (125) Palmer(VC) (114) M.Salah(C) (123)        |
+|                      |              |          |           |                 |                           João Pedro (177) Watkins (167)                             |
+|                      |              |          |           |                 |                                          -                                           |
+|                      |              |          |           |                 |                    Dúbravka (20) Tosin (33) Estève (68) Obi (0)                      |
+|                      |              |          |           |                 |                                                                                      |
+| Hotel California XI  |     1509     |   239    |     3     |       127       |                                  Vicario(VC) (90)                                    |
+|                      |              |          |           |                 |                     Møller Wolfe (35) Kayode (113) Konaté (129)                      |
+|                      |              |          |           |                 |                   Ødegaard (74) Bobb (42) Palmer (114) Berge (91)                    |
+|                      |              |          |           |                 |                  Haaland(C) (239) Strand Larsen (75) Watkins (167)                   |
+|                      |              |          |           |                 |                                          -                                           |
+|                      |              |          |           |                 |                  Kelleher (29) Kudus (65) Gvardiol (31) Hoever (2)                   |
+|                      |              |          |           |                 |                                                                                      |
+| La kula gjøre jobben |     1475     |   123    |     31    |        63       |                                  Verbruggen (130)                                    |
+|                      |              |          |           |                 |               Frimpong (63) Konsa (100) Wan-Bissaka (67) Estève (85)                 |
+|                      |              |          |           |                 |               Palmer(VC) (114) Saka (157) Kudus (75) M.Salah(C) (123)                |
+|                      |              |          |           |                 |                           João Pedro (177) Watkins (167)                             |
+|                      |              |          |           |                 |                                          -                                           |
+|                      |              |          |           |                 |                   Darlow (0) Aina (63) A.Ramsey (0) Marc Guiu (0)                    |
+|                      |              |          |           |                 |                                                                                      |
++----------------------+--------------+----------+-----------+-----------------+--------------------------------------------------------------------------------------+
+
+
+ÅRETS CAPTAIN FORESIGHT
+Spillerne med flest kapteinspoeng
+Her teller kun "ekstra" poeng spilleren gir for å være kaptein, ie. 1 x for normal kaptein og 2 x for triple
++----------------------+----------------------+-----------------------------------------+-------------------------------------+------------------------------+
+|         Team         | Total captain points | Total captain points when VC stepped in | Total gameweeks where VC stepped in | Gameweeks without captain/VC |
++----------------------+----------------------+-----------------------------------------+-------------------------------------+------------------------------+
+|   team sisteplass    |         670          |                    18                   |                  1                  |              0               |
+|    Red Lightning     |         638          |                    26                   |                  1                  |              0               |
+|     Soccer MC’s      |         616          |                    26                   |                  1                  |              0               |
+|       PC Bears       |         594          |                    26                   |                  1                  |              0               |
+|       A-laget        |         568          |                    96                   |                  2                  |              0               |
+| Hotel California XI  |         566          |                    12                   |                  1                  |              0               |
+| La kula gjøre jobben |         554          |                    28                   |                  1                  |              0               |
+| Overtenningsklubben  |         528          |                    4                    |                  1                  |              0               |
+|       Team TH        |         512          |                    8                    |                  2                  |              0               |
+| Midten er vår plass  |         454          |                    0                    |                  0                  |              0               |
++----------------------+----------------------+-----------------------------------------+-------------------------------------+------------------------------+
+
+
+ÅRETS CAPTAIN HINDSIGHT
+Spillerne med flest poeng UTEN kapteinspoeng
++----------------------+---------------------------------------+
+|         Team         | Total points excluding captain points |
++----------------------+---------------------------------------+
+|    Red Lightning     |                  1734                 |
+| Midten er vår plass  |                  1730                 |
+|       PC Bears       |                  1706                 |
+|       Team TH        |                  1666                 |
+|       A-laget        |                  1658                 |
+|     Soccer MC’s      |                  1629                 |
+|   team sisteplass    |                  1627                 |
+| Overtenningsklubben  |                  1599                 |
+| La kula gjøre jobben |                  1561                 |
+| Hotel California XI  |                  1428                 |
++----------------------+---------------------------------------+
+
+
+ÅRETS LENGSTE LEDER
+Spillerne som har ledet ligaen flest gameweeks
++----------------------+------------------------------------------+
+|         Team         | Total number of gameweeks in first place |
++----------------------+------------------------------------------+
+|   team sisteplass    |                    27                    |
+|    Red Lightning     |                    8                     |
+| Midten er vår plass  |                    1                     |
+|       Team TH        |                    1                     |
+| Overtenningsklubben  |                    1                     |
+|       PC Bears       |                    0                     |
+|     Soccer MC’s      |                    0                     |
+|       A-laget        |                    0                     |
+| La kula gjøre jobben |                    0                     |
+| Hotel California XI  |                    0                     |
++----------------------+------------------------------------------+
+
+
+ÅRETS LENGSTE BALLETAK
+Spillerne som har vært på sisteplass i ligaen flest gameweeks
++----------------------+-----------------------------------------+
+|         Team         | Total number of gameweeks in last place |
++----------------------+-----------------------------------------+
+| Hotel California XI  |                    34                   |
+| La kula gjøre jobben |                    4                    |
+|    Red Lightning     |                    0                    |
+|   team sisteplass    |                    0                    |
+|       PC Bears       |                    0                    |
+|     Soccer MC’s      |                    0                    |
+|       A-laget        |                    0                    |
+| Midten er vår plass  |                    0                    |
+|       Team TH        |                    0                    |
+| Overtenningsklubben  |                    0                    |
++----------------------+-----------------------------------------+
+
+
+ÅRETS STØRSTE LEDER
+Lagene som har ledet med flest poeng ligaen
++-----------------+-------------------+----------+
+|       Team      | Biggest point gap | Gameweek |
++-----------------+-------------------+----------+
+| team sisteplass |         85        |    13    |
+| team sisteplass |         77        |    14    |
+|  Red Lightning  |         72        |    38    |
+|  Red Lightning  |         68        |    37    |
+| team sisteplass |         66        |    15    |
+| team sisteplass |         64        |    16    |
+|  Red Lightning  |         60        |    36    |
+| team sisteplass |         55        |    17    |
+| team sisteplass |         51        |    22    |
+| team sisteplass |         50        |    21    |
++-----------------+-------------------+----------+
+
+
+ÅRETS STØRSTE BALLETAK
+Lagene som har ligget bakerst med flest poeng ligaen
++---------------------+-------------------+----------+
+|         Team        | Biggest point gap | Gameweek |
++---------------------+-------------------+----------+
+| Hotel California XI |        -121       |    38    |
+| Hotel California XI |        -100       |    37    |
+| Hotel California XI |        -74        |    12    |
+| Hotel California XI |        -70        |    13    |
+| Hotel California XI |        -67        |    11    |
+| Hotel California XI |        -61        |    14    |
+| Hotel California XI |        -54        |    10    |
+| Hotel California XI |        -54        |    15    |
+| Hotel California XI |        -44        |    9     |
+| Hotel California XI |        -41        |    16    |
++---------------------+-------------------+----------+
+
+
+ÅRETS GULLSTØVEL
+Spillerne som har scoret flest mål
++----------------------+--------------+
+|         Team         | Goals scored |
++----------------------+--------------+
+| Midten er vår plass  |     103      |
+|       A-laget        |      97      |
+|    Red Lightning     |      96      |
+|       Team TH        |      95      |
+| Overtenningsklubben  |      91      |
+| La kula gjøre jobben |      91      |
+|   team sisteplass    |      85      |
+|     Soccer MC’s      |      84      |
+|       PC Bears       |      82      |
+| Hotel California XI  |      81      |
++----------------------+--------------+
+
+
+ÅRETS ASSISTKONGE
+Spillerne som har flest assists
++----------------------+---------+
+|         Team         | Assists |
++----------------------+---------+
+|       PC Bears       |    82   |
+|   team sisteplass    |    79   |
+| La kula gjøre jobben |    76   |
+|    Red Lightning     |    74   |
+|     Soccer MC’s      |    72   |
+| Overtenningsklubben  |    70   |
+|       A-laget        |    62   |
+| Midten er vår plass  |    62   |
+|       Team TH        |    62   |
+| Hotel California XI  |    59   |
++----------------------+---------+
+
+
+ÅRETS MÅLRETTEDE
+Spillerne som har flest mål+assists
++----------------------+-------------------+
+|         Team         | Goal involvements |
++----------------------+-------------------+
+|    Red Lightning     |        170        |
+| La kula gjøre jobben |        167        |
+| Midten er vår plass  |        165        |
+|   team sisteplass    |        164        |
+|       PC Bears       |        164        |
+| Overtenningsklubben  |        161        |
+|       A-laget        |        159        |
+|       Team TH        |        157        |
+|     Soccer MC’s      |        156        |
+| Hotel California XI  |        140        |
++----------------------+-------------------+
+
+
+ÅRETS FORSVARSLØSE
+Spillerne som har flest mål imot fra spillende keepere og forsvarere
++----------------------+----------------------+
+|         Team         | Total goals conceded |
++----------------------+----------------------+
+| Overtenningsklubben  |         230          |
+| La kula gjøre jobben |         218          |
+| Hotel California XI  |         213          |
+| Midten er vår plass  |         206          |
+|       A-laget        |         196          |
+|   team sisteplass    |         194          |
+|       PC Bears       |         182          |
+|     Soccer MC’s      |         182          |
+|       Team TH        |         177          |
+|    Red Lightning     |         156          |
++----------------------+----------------------+
+
+
+ÅRETS SKUDDSIKRE
+Spillerne som har flest clean sheets fra spillende keepere og forsvarere
++----------------------+-------------------------------+------------------------------------------+
+|         Team         | Total clean sheets (gk + def) | Total clean sheet points (gk, def + mid) |
++----------------------+-------------------------------+------------------------------------------+
+|    Red Lightning     |               64              |                   320                    |
+|   team sisteplass    |               64              |                   303                    |
+|       PC Bears       |               63              |                   316                    |
+|       Team TH        |               63              |                   296                    |
+| Midten er vår plass  |               61              |                   289                    |
+|     Soccer MC’s      |               60              |                   290                    |
+|       A-laget        |               57              |                   276                    |
+| La kula gjøre jobben |               47              |                   235                    |
+| Overtenningsklubben  |               46              |                   232                    |
+| Hotel California XI  |               44              |                   218                    |
++----------------------+-------------------------------+------------------------------------------+
+
+
+ÅRETS KEEPER
+Spillerne som har flest strafferedninger
++----------------------+-----------------------+------------------------------+
+|         Team         | Total penalties saved | Total penalties saved points |
++----------------------+-----------------------+------------------------------+
+| Midten er vår plass  |           1           |              5               |
+|    Red Lightning     |           0           |              0               |
+|   team sisteplass    |           0           |              0               |
+|       PC Bears       |           0           |              0               |
+|     Soccer MC’s      |           0           |              0               |
+|       A-laget        |           0           |              0               |
+|       Team TH        |           0           |              0               |
+| Overtenningsklubben  |           0           |              0               |
+| La kula gjøre jobben |           0           |              0               |
+| Hotel California XI  |           0           |              0               |
++----------------------+-----------------------+------------------------------+
+
+
+ÅRETS FORMSPILLER
+Spillerne med høyest total ila. fem etterfølgende runder
++----------------------+--------------+----------------+---------------+-------------+
+|         Team         | Total points | Average points | From gameweek | To gameweek |
++----------------------+--------------+----------------+---------------+-------------+
+|       A-laget        |     397      |      79.4      |       33      |      37     |
+|    Red Lightning     |     396      |      79.2      |       33      |      37     |
+| Overtenningsklubben  |     390      |      78.0      |       32      |      36     |
+|     Soccer MC’s      |     378      |      75.6      |       33      |      37     |
+| La kula gjøre jobben |     377      |      75.4      |       33      |      37     |
+|       Team TH        |     372      |      74.4      |       6       |      10     |
+|       PC Bears       |     368      |      73.6      |       33      |      37     |
+|   team sisteplass    |     356      |      71.2      |       6       |      10     |
+| Midten er vår plass  |     356      |      71.2      |       33      |      37     |
+| Hotel California XI  |     331      |      66.2      |       14      |      18     |
++----------------------+--------------+----------------+---------------+-------------+
+
+
+ÅRETS UTE-AV-FORMSPILLER
+Spillerne med lavest total ila. fem etterfølgende runder
++----------------------+--------------+----------------+---------------+-------------+
+|         Team         | Total points | Average points | From gameweek | To gameweek |
++----------------------+--------------+----------------+---------------+-------------+
+| Hotel California XI  |     201      |      40.2      |       9       |      13     |
+|       Team TH        |     208      |      41.6      |       18      |      22     |
+| La kula gjøre jobben |     211      |      42.2      |       18      |      22     |
+|       A-laget        |     215      |      43.0      |       19      |      23     |
+|       PC Bears       |     217      |      43.4      |       19      |      23     |
+|   team sisteplass    |     220      |      44.0      |       19      |      23     |
+| Midten er vår plass  |     220      |      44.0      |       18      |      22     |
+| Overtenningsklubben  |     222      |      44.4      |       19      |      23     |
+|     Soccer MC’s      |     237      |      47.4      |       11      |      15     |
+|    Red Lightning     |     244      |      48.8      |       11      |      15     |
++----------------------+--------------+----------------+---------------+-------------+
+
+
+ÅRETS STABILE
+Minst differanse mellom beste og verste GW
++----------------------+--------------+-------------------+------------------+--------------+--------------------+
+|         Team         | Lowest range | Highest GW points | Lowest GW points | Total points | Average gw points  |
++----------------------+--------------+-------------------+------------------+--------------+--------------------+
+|       PC Bears       |      59      |         91        |        32        |     2300     | 60.526315789473685 |
+| Hotel California XI  |      69      |         93        |        24        |     1994     | 52.473684210526315 |
+| Midten er vår plass  |      70      |         92        |        22        |     2184     | 57.473684210526315 |
+|   team sisteplass    |      74      |         98        |        24        |     2297     | 60.44736842105263  |
+|       Team TH        |      77      |         99        |        22        |     2178     | 57.31578947368421  |
+|       A-laget        |      78      |        109        |        31        |     2226     | 58.578947368421055 |
+| La kula gjøre jobben |      82      |        109        |        27        |     2115     |  55.6578947368421  |
+| Overtenningsklubben  |      87      |        116        |        29        |     2127     | 55.973684210526315 |
+|    Red Lightning     |      98      |        128        |        30        |     2372     | 62.421052631578945 |
+|     Soccer MC’s      |     110      |        140        |        30        |     2245     | 59.078947368421055 |
++----------------------+--------------+-------------------+------------------+--------------+--------------------+
+
+
+ÅRETS BENKESLITER
+Spillerne med mest poeng på benken (eksklusiv autoinnbyttere)
++----------------------+--------------------+
+|         Team         | Total bench points |
++----------------------+--------------------+
+| Midten er vår plass  |        392         |
+| La kula gjøre jobben |        350         |
+|       Team TH        |        344         |
+|     Soccer MC’s      |        331         |
+|       A-laget        |        330         |
+| Overtenningsklubben  |        327         |
+|   team sisteplass    |        315         |
+| Hotel California XI  |        313         |
+|    Red Lightning     |        285         |
+|       PC Bears       |        219         |
++----------------------+--------------------+
+
+
+ÅRETS SUPERINNBYTTER
+Spillerne med mest autoinnbytterpoeng
++----------------------+-----------------------+
+|         Team         | Total auto-sub points |
++----------------------+-----------------------+
+| Hotel California XI  |          104          |
+| Midten er vår plass  |           78          |
+|   team sisteplass    |           77          |
+|       Team TH        |           77          |
+|     Soccer MC’s      |           73          |
+|       A-laget        |           71          |
+| Overtenningsklubben  |           62          |
+|       PC Bears       |           38          |
+| La kula gjøre jobben |           38          |
+|    Red Lightning     |           37          |
++----------------------+-----------------------+
+
+
+ÅRETS STYGGE SPILLER
+Spillerne med flest minuspoeng for rødt+gult kort (fra spillende spillere)
++----------------------+-------------------+-----------------+--------------------+-------------+
+|         Team         | Total card points | Total red cards | Total yellow cards | Total cards |
++----------------------+-------------------+-----------------+--------------------+-------------+
+|    Red Lightning     |        -67        |        0        |         67         |      67     |
+| Overtenningsklubben  |        -67        |        1        |         64         |      65     |
+| La kula gjøre jobben |        -66        |        2        |         60         |      62     |
+| Midten er vår plass  |        -64        |        2        |         58         |      60     |
+|       PC Bears       |        -63        |        1        |         60         |      61     |
+|       Team TH        |        -61        |        2        |         55         |      57     |
+|     Soccer MC’s      |        -59        |        1        |         56         |      57     |
+|       A-laget        |        -54        |        1        |         51         |      52     |
+| Hotel California XI  |        -53        |        2        |         47         |      49     |
+|   team sisteplass    |        -52        |        1        |         49         |      50     |
++----------------------+-------------------+-----------------+--------------------+-------------+
+
+
+ÅRETS SELVEIDE
+Spillerne med flest selvmål
++----------------------+-----------------+
+|         Team         | Total own goals |
++----------------------+-----------------+
+| Overtenningsklubben  |        4        |
+|    Red Lightning     |        2        |
+|       PC Bears       |        2        |
+|     Soccer MC’s      |        2        |
+|       A-laget        |        2        |
+| Hotel California XI  |        2        |
+|   team sisteplass    |        1        |
+| Midten er vår plass  |        0        |
+|       Team TH        |        0        |
+| La kula gjøre jobben |        0        |
++----------------------+-----------------+
+
+
+ÅRETS BOMSPILLER
+Spillerne med flest straffebom
++----------------------+------------------------+
+|         Team         | Total penalties missed |
++----------------------+------------------------+
+|     Soccer MC’s      |           6            |
+|    Red Lightning     |           4            |
+|   team sisteplass    |           4            |
+|       PC Bears       |           3            |
+|       Team TH        |           3            |
+| Overtenningsklubben  |           3            |
+|       A-laget        |           2            |
+| Midten er vår plass  |           2            |
+| La kula gjøre jobben |           2            |
+| Hotel California XI  |           2            |
++----------------------+------------------------+
+
+
+ÅRETS BONUSSPILLER
+Spillerne med flest bonuspoeng
++----------------------+--------------------+-----------+
+|         Team         | Total bonus points | Total BPS |
++----------------------+--------------------+-----------+
+|    Red Lightning     |        215         |    7928   |
+|       PC Bears       |        214         |    7664   |
+| Midten er vår plass  |        210         |    7603   |
+|       A-laget        |        203         |    7538   |
+|       Team TH        |        201         |    7425   |
+| Overtenningsklubben  |        199         |    7337   |
+|   team sisteplass    |        198         |    7710   |
+|     Soccer MC’s      |        196         |    7762   |
+| La kula gjøre jobben |        191         |    7172   |
+| Hotel California XI  |        162         |    6794   |
++----------------------+--------------------+-----------+
+
+
+ÅRETS MVP
+Spillerne som har gitt mest poeng til et lag ila. sesongen, inklusive kapteinspoeng
++----------------------+---------+---------------------+
+|         Team         |  Player | Total player points |
++----------------------+---------+---------------------+
+| Hotel California XI  | Haaland |         488         |
+|       A-laget        | Haaland |         420         |
+| Overtenningsklubben  | Haaland |         417         |
+| Midten er vår plass  | Haaland |         397         |
+|   team sisteplass    | Haaland |         385         |
+|     Soccer MC’s      | Haaland |         374         |
+|       PC Bears       | Haaland |         358         |
+|    Red Lightning     | Haaland |         356         |
+| La kula gjøre jobben | Haaland |         336         |
+|       Team TH        | Haaland |         322         |
++----------------------+---------+---------------------+
+
+
+ÅRETS BESTE DIFF
+Spillerne som har gitt mest poeng (totalt, i snitt og på én runde) for et lag
+max_ownership_share for en differential er satt til 0.3
+Utregning av diff points for hver runde: gw_points/owned_by_count --> poeng den spilleren kun gir det laget
+
+BY TOTAL DIFF POINTS
++----------------------+----------+--------------------+--------------+----------------+---------------------+
+|         Team         |  Player  | total_diff_points  | total_points | gameweek_count | avg_ownership_share |
++----------------------+----------+--------------------+--------------+----------------+---------------------+
+| La kula gjøre jobben |  Guéhi   | 68.33333333333333  |      90      |       19       | 0.17894736842105263 |
+|       Team TH        |   Raya   | 61.000000000000014 |     117      |       26       | 0.23846153846153847 |
+|       Team TH        |  Konsa   |        60.0        |      60      |       21       |         0.1         |
+| Hotel California XI  |  Virgil  | 58.666666666666664 |      82      |       13       |  0.1846153846153846 |
+|       Team TH        |  Guéhi   | 53.33333333333333  |      75      |       16       |         0.2         |
+|       Team TH        | Grealish |        52.0        |      52      |       14       |         0.1         |
+|     Soccer MC’s      |  Palmer  | 51.833333333333336 |      67      |       9        | 0.18888888888888888 |
+|       PC Bears       |  Garner  |        51.0        |      51      |       13       |         0.1         |
+| Midten er vår plass  |   Eze    |        50.0        |      51      |       9        |  0.1111111111111111 |
+| Midten er vår plass  |  Roefs   |        47.0        |      47      |       13       |  0.1076923076923077 |
++----------------------+----------+--------------------+--------------+----------------+---------------------+
+
+BY AVERAGE DIFF POINTS
++----------------------+-------------+-------------------+--------------+----------------+---------------------+
+|         Team         |    Player   |  avg_diff_points  | total_points | gameweek_count | avg_ownership_share |
++----------------------+-------------+-------------------+--------------+----------------+---------------------+
+| Midten er vår plass  |    Foden    |        17.0       |      17      |       1        |         0.1         |
+| Midten er vår plass  |    Okafor   |        16.0       |      16      |       1        |         0.1         |
+| La kula gjøre jobben |     Groß    |        16.0       |      16      |       1        |         0.1         |
+|     Soccer MC’s      |    Bowen    |        14.0       |      14      |       1        |         0.1         |
+| Midten er vår plass  | B.Fernandes |        11.0       |      22      |       2        |         0.1         |
+|       PC Bears       | Pedro Porro |        10.0       |      10      |       1        |         0.1         |
+|     Soccer MC’s      |   Truffert  | 8.666666666666666 |      26      |       3        | 0.10000000000000002 |
+|     Soccer MC’s      |     Isak    |        8.0        |      8       |       1        |         0.1         |
+|       Team TH        |    Dorgu    |        8.0        |      8       |       1        |         0.1         |
+|   team sisteplass    |    Foden    | 7.666666666666667 |      16      |       2        |         0.2         |
++----------------------+-------------+-------------------+--------------+----------------+---------------------+
+
+BY HIGHEST SINGLE GAMEWEEK DIFF
++----------------------+---------------+-----------------+-------------------+--------------------------+
+|         Team         |     Player    | max_diff_points | max_diff_gameweek | max_diff_ownership_share |
++----------------------+---------------+-----------------+-------------------+--------------------------+
+|    Red Lightning     |     Schade    |       20.0      |         18        |           0.1            |
+|     Soccer MC’s      |     Palmer    |       20.0      |         25        |           0.1            |
+| Midten er vår plass  |      Eze      |       20.0      |         12        |           0.1            |
+|   team sisteplass    |     Mbeumo    |       18.0      |         38        |           0.1            |
+| Midten er vår plass  |  B.Fernandes  |       18.0      |         15        |           0.1            |
+| Midten er vår plass  |     Foden     |       17.0      |         14        |           0.1            |
+| Hotel California XI  |     Virgil    |       17.0      |         26        |           0.1            |
+| Midten er vår plass  |     Okafor    |       16.0      |         33        |           0.1            |
+| La kula gjøre jobben |      Groß     |       16.0      |         33        |           0.1            |
+| Hotel California XI  | Dewsbury-Hall |       16.0      |         15        |           0.1            |
++----------------------+---------------+-----------------+-------------------+--------------------------+
+
+
+ÅRETS HØYESTE RANK
+Spillerne med høyest gw+overall rank
++----------------------+-----------------+----------------------+
+|         Team         | Highest GW rank | Highest overall rank |
++----------------------+-----------------+----------------------+
+|   team sisteplass    |      17573      |         2548         |
+|    Red Lightning     |      21386      |        23341         |
+|       Team TH        |      34111      |        117608        |
+|       PC Bears       |      331563     |        164854        |
+| Overtenningsklubben  |      342584     |        316805        |
+|     Soccer MC’s      |      12763      |        361408        |
+|       A-laget        |      85416      |        641076        |
+| Midten er vår plass  |      82494      |        929446        |
+| La kula gjøre jobben |       1941      |       2026653        |
+| Hotel California XI  |      894594     |       3116333        |
++----------------------+-----------------+----------------------+
+
+
+ÅRETS LAVESTE RANK
+Spillerne med lavest gw+overall rank
++----------------------+----------------+---------------------+
+|         Team         | Lowest GW rank | Lowest overall rank |
++----------------------+----------------+---------------------+
+| Hotel California XI  |    11967795    |       8142624       |
+| La kula gjøre jobben |    11967795    |       7535825       |
+|    Red Lightning     |    8594492     |       6590147       |
+|     Soccer MC’s      |    12306580    |       5471399       |
+| Midten er vår plass  |    11372635    |       4625380       |
+|   team sisteplass    |    12462454    |       4551053       |
+| Overtenningsklubben  |    10951124    |       4551053       |
+|       A-laget        |    11455950    |       4274377       |
+|       Team TH        |    12306842    |       3932974       |
+|       PC Bears       |    11246651    |       3534868       |
++----------------------+----------------+---------------------+
+
+
+ÅRETS TEMPLATE
+Managerne med likest lag som de andre (i snitt per spiller per gameweek)
++----------------------+-------------------------------------+
+|         Team         | Average player ownership percentage |
++----------------------+-------------------------------------+
+|    Red Lightning     |          46.36842105263158          |
+|   team sisteplass    |          46.19298245614035          |
+|       A-laget        |          46.19298245614035          |
+| Overtenningsklubben  |          45.85964912280699          |
+|       PC Bears       |          45.368421052631575         |
+|     Soccer MC’s      |          45.26315789473685          |
+| La kula gjøre jobben |          43.87719298245614          |
+|       Team TH        |          40.12280701754386          |
+| Midten er vår plass  |          38.50877192982456          |
+| Hotel California XI  |          35.96491228070175          |
++----------------------+-------------------------------------+
+
+
+ÅRETS VINGLEPETTER
+Managerne som har vært innom flest plasser på tabellen
++----------------------+----------------------+--------------------------+
+|         Team         | Antall unike plasser |         Plasser          |
++----------------------+----------------------+--------------------------+
+| Overtenningsklubben  |          8           | {1, 2, 3, 4, 5, 6, 7, 8} |
+|    Red Lightning     |          8           | {1, 2, 3, 4, 5, 6, 7, 8} |
+| Midten er vår plass  |          7           |  {1, 3, 4, 5, 6, 7, 8}   |
+|       PC Bears       |          7           |  {2, 3, 4, 5, 6, 7, 8}   |
+|       Team TH        |          7           |  {1, 2, 3, 4, 5, 6, 7}   |
+|       A-laget        |          7           |  {2, 3, 4, 5, 6, 7, 8}   |
+|     Soccer MC’s      |          6           |    {4, 5, 6, 7, 8, 9}    |
+|   team sisteplass    |          4           |       {1, 2, 3, 6}       |
+| Hotel California XI  |          3           |        {9, 10, 3}        |
+| La kula gjøre jobben |          3           |        {9, 10, 6}        |
++----------------------+----------------------+--------------------------+
+
+
+ÅRETS CHIPP-KONGE
+Mest poeng på chips
++----------------------+--------------------------------------+-------------------+-----------------------+
+|         Team         | Total chip points excluding wildcard | Total chip points | Total wildcard points |
++----------------------+--------------------------------------+-------------------+-----------------------+
+|   team sisteplass    |                 460                  |        574        |          114          |
+|     Soccer MC’s      |                 439                  |        583        |          144          |
+|       A-laget        |                 408                  |        522        |          114          |
+|    Red Lightning     |                 403                  |        529        |          126          |
+| Overtenningsklubben  |                 399                  |        530        |          131          |
+|       PC Bears       |                 382                  |        488        |          106          |
+| Hotel California XI  |                 342                  |        433        |           91          |
+|       Team TH        |                 298                  |        386        |           88          |
+| La kula gjøre jobben |                 288                  |        383        |           95          |
+| Midten er vår plass  |                 175                  |        321        |          146          |
++----------------------+--------------------------------------+-------------------+-----------------------+
+
+
+ÅRETS PIMP
+Mest hits, best hits (samme gameweek)
++----------------------+--------------------------+-------------------------+-----------------------------------+------------------------------------+-----------------+---------------------+---------------------+------------------------+
+|         Team         | Total pts earned on hits | Avg. pts earned per hit | Avg. pts for players IN with hits | Avg. pts for players OUT with hits | Total transfers | Total transfer hits | Total transfer cost | Avg. cost per transfer |
++----------------------+--------------------------+-------------------------+-----------------------------------+------------------------------------+-----------------+---------------------+---------------------+------------------------+
+|    Red Lightning     |            3             |           3.0           |                8.0                |                1.0                 |        37       |          1          |          4          |  0.10810810810810811   |
+|       PC Bears       |            0             |            0            |                 -                 |                 -                  |        37       |          0          |          0          |          0.0           |
+|     Soccer MC’s      |            0             |            0            |                 -                 |                 -                  |        37       |          0          |          0          |          0.0           |
+|       A-laget        |            0             |            0            |                 -                 |                 -                  |        33       |          0          |          0          |          0.0           |
+|       Team TH        |            0             |            0            |                 -                 |                 -                  |        26       |          0          |          0          |          0.0           |
+| La kula gjøre jobben |            0             |            0            |                 -                 |                 -                  |        37       |          0          |          0          |          0.0           |
+| Overtenningsklubben  |            -1            |           -1.0          |                3.0                |                0.0                 |        38       |          1          |          4          |  0.10526315789473684   |
+|   team sisteplass    |            -4            |           -4.0          |                2.0                |                2.0                 |        37       |          1          |          4          |  0.10810810810810811   |
+| Midten er vår plass  |            -8            |           -1.6          |                4.0                |                1.6                 |        40       |          5          |          20         |          0.5           |
+| Hotel California XI  |           -28            |          -14.0          |                2.0                |                12.0                |        38       |          2          |          8          |  0.21052631578947367   |
++----------------------+--------------------------+-------------------------+-----------------------------------+------------------------------------+-----------------+---------------------+---------------------+------------------------+
+
+
+ÅRETS HIGHSCORE
+Mest poeng på én gameweek
++----------------------+-----------------+---------------+-----------------+
+|         Team         | Gameweek points | Gameweek rank | Gameweek number |
++----------------------+-----------------+---------------+-----------------+
+|     Soccer MC’s      |       140       |     12763     |        33       |
+|    Red Lightning     |       128       |     115292    |        33       |
+| Overtenningsklubben  |       116       |     342584    |        33       |
+|       A-laget        |       109       |     557793    |        33       |
+| La kula gjøre jobben |       109       |     557793    |        33       |
+| La kula gjøre jobben |       108       |      1941     |        37       |
+|       Team TH        |        99       |     34111     |        7        |
+|   team sisteplass    |        98       |     50598     |        10       |
+|   team sisteplass    |        96       |    1298048    |        33       |
+|     Soccer MC’s      |        93       |     81778     |        8        |
++----------------------+-----------------+---------------+-----------------+
+
+
+ÅRETS LOWSCORE
+Lavest poeng på én gameweek
++----------------------+-----------------+---------------+-----------------+
+|         Team         | Gameweek points | Gameweek rank | Gameweek number |
++----------------------+-----------------+---------------+-----------------+
+| Midten er vår plass  |        22       |    10989004   |        13       |
+|       Team TH        |        22       |    12306842   |        19       |
+|   team sisteplass    |        24       |    12462454   |        23       |
+| Hotel California XI  |        24       |    11409573   |        12       |
+| Hotel California XI  |        26       |    10525176   |        2        |
+| La kula gjøre jobben |        27       |    11967795   |        22       |
+| Hotel California XI  |        27       |    11015260   |        11       |
+| Hotel California XI  |        27       |    11967795   |        22       |
+|       Team TH        |        28       |    10348161   |        12       |
+| Midten er vår plass  |        29       |    10610171   |        11       |
++----------------------+-----------------+---------------+-----------------+
+
+
+ÅRETS RUNDBRENNER
+Managerne som har vært innom flest unike spillere
++----------------------+----------------------------+
+|         Team         | Number of distinct players |
++----------------------+----------------------------+
+|     Soccer MC’s      |             75             |
+| Hotel California XI  |             75             |
+|    Red Lightning     |             71             |
+|       A-laget        |             71             |
+| Overtenningsklubben  |             70             |
+| Midten er vår plass  |             68             |
+| La kula gjøre jobben |             67             |
+|   team sisteplass    |             64             |
+|       PC Bears       |             60             |
+|       Team TH        |             49             |
++----------------------+----------------------------+
+
+
+ÅRETS SPÅMANN
+Mest poeng fra spillere byttet inn samme runde
++----------------------+--------------------------------------------------------+----------------------------------------------------------+
+|         Team         | Total points from players transferred in (the same gw) | Average points from players transferred in (the same gw) |
++----------------------+--------------------------------------------------------+----------------------------------------------------------+
+|   team sisteplass    |                          431                           |                    5.597402597402597                     |
+|    Red Lightning     |                          398                           |                    4.5227272727272725                    |
+|     Soccer MC’s      |                          385                           |                    4.425287356321839                     |
+|       PC Bears       |                          369                           |                    5.054794520547945                     |
+| Overtenningsklubben  |                          332                           |                    4.611111111111111                     |
+|       A-laget        |                          317                           |                    4.171052631578948                     |
+| Midten er vår plass  |                          315                           |                    4.632352941176471                     |
+| La kula gjøre jobben |                          310                           |                    4.5588235294117645                    |
+| Hotel California XI  |                          290                           |                    4.084507042253521                     |
+|       Team TH        |                          232                           |                           5.8                            |
++----------------------+--------------------------------------------------------+----------------------------------------------------------+
+
+
+ÅRETS KARMA
+Mest poeng fra spillere byttet UT samme runde
++----------------------+---------------------------------------------------------+-----------------------------------------------------------+
+|         Team         | Total points from players transferred out (the same gw) | Average points from players transferred out (the same gw) |
++----------------------+---------------------------------------------------------+-----------------------------------------------------------+
+|     Soccer MC’s      |                           319                           |                            3.19                           |
+|   team sisteplass    |                           230                           |                     2.911392405063291                     |
+|    Red Lightning     |                           211                           |                      1.97196261682243                     |
+| Hotel California XI  |                           204                           |                     2.6493506493506493                    |
+| La kula gjøre jobben |                           194                           |                     2.6944444444444446                    |
+|       A-laget        |                           185                           |                     2.371794871794872                     |
+|       PC Bears       |                           158                           |                     2.164383561643836                     |
+| Overtenningsklubben  |                           148                           |                     2.0555555555555554                    |
+| Midten er vår plass  |                           125                           |                     1.838235294117647                     |
+|       Team TH        |                            71                           |                           1.775                           |
++----------------------+---------------------------------------------------------+-----------------------------------------------------------+
+
+
+ÅRETS VANILLA (ICE)
+Mest vaniljepoeng, ie. poengtotal ekskludert ekstra kapteinspoeng (inkl. TC), auto-subs og benkespillere fra bench boost
++----------------------+----------------------+--------------+----------------------+-----------------------+--------------------------------+
+|         Team         | Total vanilla points | Total points | Extra captain points | Total auto sub points | Total bench boost bench points |
++----------------------+----------------------+--------------+----------------------+-----------------------+--------------------------------+
+|    Red Lightning     |         1685         |     2372     |         638          |           37          |               12               |
+|       PC Bears       |         1650         |     2300     |         594          |           38          |               18               |
+| Midten er vår plass  |         1630         |     2184     |         454          |           78          |               22               |
+|       A-laget        |         1573         |     2226     |         568          |           71          |               14               |
+|       Team TH        |         1570         |     2178     |         512          |           77          |               19               |
+|   team sisteplass    |         1538         |     2297     |         670          |           77          |               12               |
+|     Soccer MC’s      |         1527         |     2245     |         616          |           73          |               29               |
+| Overtenningsklubben  |         1514         |     2127     |         528          |           62          |               23               |
+| La kula gjøre jobben |         1502         |     2115     |         554          |           38          |               21               |
+| Hotel California XI  |         1318         |     1994     |         566          |          104          |               6                |
++----------------------+----------------------+--------------+----------------------+-----------------------+--------------------------------+
+
+
+FERDIG!
